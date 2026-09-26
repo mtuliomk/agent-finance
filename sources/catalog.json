@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "anbima-debentures",
+      "name": "ANBIMA Data — busca de debêntures",
+      "url": "https://data.anbima.com.br/busca/debentures",
+      "topics": [
+        "credito",
+        "produtos"
+      ],
+      "content_types": [
+        "cadastro",
+        "indicador"
+      ],
+      "publisher_type": "entidade-setorial",
+      "role": "primaria",
+      "purpose": "Localizar debêntures de oferta pública por emissor, código B3 ou ISIN e consultar características e preços de referência.",
+      "limitations": "Cobertura limitada às emissões disponíveis na plataforma; preço e taxa indicativos não são oferta executável. Conferir série e data de referência.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "b3-area-investidor",
+      "name": "B3 — Área do Investidor",
+      "url": "https://www.b3.com.br/pt_br/produtos-e-servicos/central-depositaria/canal-com-investidores/area-do-investidor/",
+      "topics": [
+        "credito",
+        "produtos"
+      ],
+      "content_types": [
+        "documento",
+        "cadastro"
+      ],
+      "publisher_type": "entidade-setorial",
+      "role": "primaria",
+      "purpose": "Consultar extratos, posições e movimentações próprias de renda fixa registrada ou depositada na B3.",
+      "limitations": "Exige autenticação; não é busca pública de ativos. Confirmar identificação, características contratuais e eventuais divergências com a instituição custodiante.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "bcb-copom",
+      "name": "BCB — comunicados do Copom",
+      "url": "https://www.bcb.gov.br/controleinflacao/comunicadoscopom",
+      "topics": [
+        "macroeconomia"
+      ],
+      "content_types": [
+        "documento",
+        "indicador"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Confirmar decisão da Selic meta e sua justificativa.",
+      "limitations": "Conferir reunião e vigência; Selic meta não é retorno líquido de produto nem previsão futura.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "bcb-focus",
+      "name": "BCB — Relatório Focus",
+      "url": "https://www.bcb.gov.br/publicacoes/focus",
+      "topics": [
+        "macroeconomia"
+      ],
+      "content_types": [
+        "expectativa"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Consultar expectativas de mercado para inflação, câmbio, atividade e Selic.",
+      "limitations": "Informar semana e horizonte; projeções são de participantes do mercado, não previsão oficial do BCB.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "bcb-selic-historico",
+      "name": "BCB — histórico da taxa básica",
+      "url": "https://www.bcb.gov.br/controleinflacao/historicotaxasjuros",
+      "topics": [
+        "macroeconomia"
+      ],
+      "content_types": [
+        "indicador"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Consultar decisões e datas históricas da taxa básica.",
+      "limitations": "Distinguir meta da Selic de taxa efetiva e de remuneração contratada.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "cvm-companhias",
+      "name": "CVM — consultas de companhias",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/regulados/consultas-por-participante/companhias",
+      "topics": [
+        "acoes",
+        "noticias"
+      ],
+      "content_types": [
+        "documento",
+        "cadastro"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Localizar DFP, ITR, fatos relevantes e comunicados divulgados por companhias.",
+      "limitations": "Citar documento específico, período, data e eventual reapresentação; a página de busca não é evidência.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "cvm-fundos",
+      "name": "CVM — consultas de fundos",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/regulados/consultas-por-participante/fundos-de-investimento",
+      "topics": [
+        "fundos",
+        "noticias"
+      ],
+      "content_types": [
+        "documento",
+        "cadastro"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Localizar regulamentos, informes e fatos relevantes de fundos e FIIs.",
+      "limitations": "Identificar fundo/classe e documento; patrimônio passado não equivale a preço negociado.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "decreto-6306",
+      "name": "Decreto 6.306/2007 — IOF compilado",
+      "url": "https://planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6306compilado.htm",
+      "topics": [
+        "tributacao"
+      ],
+      "content_types": [
+        "norma"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Conferir texto e vigência das hipóteses de IOF, inclusive remessas.",
+      "limitations": "Ler alterações e notas de vigência; classificação deve refletir finalidade real da operação.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "fgc-cobertura",
+      "name": "FGC — cobertura e produtos",
+      "url": "https://fgc.org.br/sobre-garantia-fgc",
+      "topics": [
+        "credito",
+        "produtos"
+      ],
+      "content_types": [
+        "orientacao"
+      ],
+      "publisher_type": "entidade-setorial",
+      "role": "primaria",
+      "purpose": "Conferir produtos elegíveis e limites de garantia vigentes.",
+      "limitations": "Confirmar instrumento e regra aplicável; cobertura potencial não é liquidez imediata.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "fgc-conglomerados",
+      "name": "FGC — instituições e conglomerados",
+      "url": "https://www.fgc.org.br/instituicoes-associadas-e-conglomerados",
+      "topics": [
+        "credito"
+      ],
+      "content_types": [
+        "cadastro"
+      ],
+      "publisher_type": "entidade-setorial",
+      "role": "primaria",
+      "purpose": "Identificar associação e conglomerado do emissor para somar exposição entre custodiantes.",
+      "limitations": "Confirmar nome jurídico no instrumento e composição do grupo na data da decisão.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "ibge-ipca",
+      "name": "IBGE — indicadores e IPCA",
+      "url": "https://www.ibge.gov.br/indicadores",
+      "topics": [
+        "macroeconomia"
+      ],
+      "content_types": [
+        "indicador"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Consultar inflação realizada e período de referência.",
+      "limitations": "Distinguir mensal, acumulado em 12 meses e projeção; conferir série e revisões.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "lei-14754",
+      "name": "Lei 14.754/2023 — texto oficial",
+      "url": "https://presidencia.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14754.htm",
+      "topics": [
+        "tributacao"
+      ],
+      "content_types": [
+        "norma"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Conferir texto e vigência das regras brasileiras para aplicações financeiras no exterior.",
+      "limitations": "Ler dispositivo aplicável e alterações; não generalizar a todas as operações internacionais.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "rf-imposto-renda",
+      "name": "Receita Federal — Meu Imposto de Renda",
+      "url": "https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda",
+      "topics": [
+        "tributacao"
+      ],
+      "content_types": [
+        "orientacao"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Localizar manual e orientações práticas de IRPF do exercício aplicável.",
+      "limitations": "Conferir ano-calendário, exercício e enquadramento do produto; orientação geral não resolve caso individual.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    },
+    {
+      "id": "tesouro-direto-titulos",
+      "name": "Tesouro Direto — rendimento dos títulos",
+      "url": "https://www.tesourodireto.com.br/produtos/dados-sobre-titulos/rendimento-dos-titulos",
+      "topics": [
+        "produtos"
+      ],
+      "content_types": [
+        "oferta",
+        "indicador"
+      ],
+      "publisher_type": "orgao-publico",
+      "role": "primaria",
+      "purpose": "Identificar títulos do Tesouro Direto disponíveis para investimento ou resgate por tipo e vencimento e consultar preços e taxas divulgados.",
+      "limitations": "Oferta, preços e taxas variam com a data e o horário; a página não comprova posição individual nem lista necessariamente títulos fora da oferta atual.",
+      "verified_on": "2026-09-26",
+      "status": "ativa"
+    }
+  ]
+}
