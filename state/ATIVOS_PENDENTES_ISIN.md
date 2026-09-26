@@ -146,13 +146,11 @@ ADECOAGRO, BRF, CARAMURU, MINERVA, SÃO SALVADOR, USINA SÃO FRANCISCO, VALE COO
 
 ## Categorias de Análise
 
-### ❌ Nunca em B3
+### ❌ Genuinamente não em B3
 
 Emissores **completamente ausentes** na base B3 (NUMERACA.TXT):
 - AFINZ
-- BANCO BV S/A
 - BELENUS
-- CLOUDWALK INFINITEPAY
 - FS BIOENERGIA
 - SÃO SALVADOR
 - USINA SÃO FRANCISCO - BALBO
@@ -163,10 +161,23 @@ Emissores **completamente ausentes** na base B3 (NUMERACA.TXT):
 - CERRADÃO
 - COPAGRI
 - RAIZEN
-- BROOKFIELD - FL SQUARE
-- ENAUTA
-- MAGAZINE LUIZA (CRI)
-- DASA (CRI)
+
+**Total: 12 emissores não encontrados**
+
+### ⚠️ Encontrados em B3, mas SEM o tipo específico
+
+Emissores **existem em B3**, mas **não como emissores dos tipos listados no CSV**:
+
+| Emissor | CSV | B3 tem | Motivo |
+|---------|-----|--------|--------|
+| BANCO BV S/A | LF, LCA | Fundos, Holdings | Provavelmente intermediário/custodiante |
+| CLOUDWALK | CDB | FIDCs (Fundos) | Pode ser FIDC, não CDB |
+| ENAUTA | DEB | FIDCs, Holdings | Estrutura de crédito diferente |
+| MAGAZINE LUIZA | CRI | Holdings, Fundos | Pode ser devedor em CRI estruturado |
+| DASA | CRI | Holdings, Fundos | Pode ser devedor em CRI estruturado |
+| BROOKFIELD | CRI | FIIs, FIPs | Pode ser devedor em CRI estruturado |
+
+**Total: 6 emissores encontrados, tipo não mapeado**
 
 ### ⚠️ Emissores encontrados, mas tipo/data fora de B3
 
