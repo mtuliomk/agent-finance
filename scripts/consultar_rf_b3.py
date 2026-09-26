@@ -84,6 +84,7 @@ class ConsultadorRFB3:
 
     def buscar(
         self,
+        isin: str = None,
         emissor: str = None,
         tipo: str = None,
         vencimento: str = None,
@@ -91,12 +92,18 @@ class ConsultadorRFB3:
     ) -> List[Dict]:
         """Busca títulos com os filtros especificados.
 
+        Se ISIN for fornecido, busca apenas por ISIN (ignora outros filtros).
         Por padrão, inclui inativos (apenas_ativos=False) pois muitos títulos
         no banco B3 estão inativados mas ainda com dados válidos.
         """
         resultados = []
 
         for titulo in self.titulos:
+            # Filtro prioritário: ISIN
+            if isin:
+                if titulo['isin'].upper() == isin.upper():
+                    resultados.append(titulo)
+                continue
             # Filtro: apenas ativos (desabilitado por padrão)
             if apenas_ativos and not titulo['ativo']:
                 continue
@@ -206,12 +213,20 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog='''
 Exemplos:
+  # Buscar por ISIN direto
+  %(prog)s --isin BRAGBKC00JG1
+
+  # Buscar por filtros
   %(prog)s --emissor AGIBANK --tipo CDB --vencimento 2027-07
   %(prog)s --emissor "BANCO XP" --tipo CDB
   %(prog)s --tipo CRA --vencimento 2027
         '''
     )
 
+    parser.add_argument(
+        '--isin',
+        help='Código ISIN (ex: BRAGBKC00JG1) - busca prioritária, ignora outros filtros'
+    )
     parser.add_argument(
         '--emissor',
         help='Nome ou código do emissor (ex: AGIBANK, BANCO XP, BMG)'
@@ -222,7 +237,7 @@ Exemplos:
     )
     parser.add_argument(
         '--vencimento',
-        help='Data de vencimento (ex: 2027-07-21, 2027-07, 2027)'
+        help='Data de vencimento (ex: 2027-07-21, 2027-07, 2027, 2027-Q3)'
     )
     parser.add_argument(
         '--apenas-ativos',
@@ -239,12 +254,13 @@ Exemplos:
     args = parser.parse_args()
 
     # Validação: ao menos um filtro
-    if not any([args.emissor, args.tipo, args.vencimento]):
-        parser.error('Especifique ao menos um filtro: --emissor, --tipo ou --vencimento')
+    if not any([args.isin, args.emissor, args.tipo, args.vencimento]):
+        parser.error('Especifique ao menos um filtro: --isin, --emissor, --tipo ou --vencimento')
 
     try:
         consultor = ConsultadorRFB3()
         resultados = consultor.buscar(
+            isin=args.isin,
             emissor=args.emissor,
             tipo=args.tipo,
             vencimento=args.vencimento,

@@ -9,7 +9,8 @@ Pesquisa no banco de dados da B3 (arquivo NUMERACA.TXT v1.0) para encontrar tít
 
 ## Entrada
 
-Forneça os filtros desejados (ao menos um):
+Forneça pelo menos um filtro:
+- **ISIN** (opcional): Código ISIN (ex: BRAGBKC00JG1) - busca prioritária, ignora outros filtros
 - **Emissor**: nome ou código (ex: AGIBANK, AGBK, BANCO XP, BMG)
 - **Tipo**: CDB, CRA, CRI, DEB, LCA, LCD, LF, FND
 - **Vencimento**: data ou período (ex: 2027-07-21, 2027-07, 2027, 2027-Q3)
@@ -45,6 +46,10 @@ Para cada título encontrado:
 ## Como usar
 
 ```bash
+# Buscar por ISIN (busca prioritária e rápida)
+python scripts/consultar_rf_b3.py --isin BRAGBKC00JG1
+# Retorna 1 registro com dados completos
+
 # Buscar todos os CDBs do AGIBANK com vencimento em julho/2027
 python scripts/consultar_rf_b3.py --emissor AGIBANK --tipo CDB --vencimento 2027-07
 # Retorna 41 registros
@@ -54,6 +59,11 @@ python scripts/consultar_rf_b3.py --tipo CRA --vencimento 2027
 
 # Saída em CSV
 python scripts/consultar_rf_b3.py --tipo CDB --formato csv
+
+# Múltiplos ISINs (requer múltiplas execuções)
+for isin in BRAGBKC00JG1 BRAGBKC010E5; do
+  python scripts/consultar_rf_b3.py --isin $isin
+done
 ```
 
 ## Observações
