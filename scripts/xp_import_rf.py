@@ -2,6 +2,7 @@
 """Import the Renda Fixa section of one XP PosicaoDetalhada workbook."""
 
 import argparse
+import re
 from decimal import Decimal
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -16,13 +17,57 @@ else:
 
 OUTPUT = ROOT / "state" / "positions" / "renda_fixa.csv"
 SECTION = "Renda Fixa"
-CSV_FIELDS_RF = (*CSV_FIELDS, "market_rentability", "isin")
+CSV_FIELDS_RF = (*CSV_FIELDS, "market_rentability", "isin", "issuer", "investment_type")
+ISSUER_DESCRIPTION = re.compile(
+    r"^(CDB|CRA|CRI|DEB|LCA|LCD|LF|FND) (.+) - "
+    r"(?:JAN|FEV|MAR|ABR|MAI|JUN|JUL|AGO|SET|OUT|NOV|DEZ)/\d{4}$"
+)
 HEADERS = {
     "B": "Saldo a mercado", "C": "% Alocação", "D": "Valor aplicado",
     "E": "Valor aplicado original", "F": "Rentabilidade a mercado",
     "G": "Data aplicação", "H": "Data vencimento", "I": "Quantidade",
     "J": "Preço Unitário", "K": "IR", "L": "IOF", "M": "Saldo líquido",
 }
+
+
+def parse_issuer(description):
+    match = ISSUER_DESCRIPTION.fullmatch(description)
+    if not match:
+        return PENDING
+    issuer = match.group(2).removesuffix(" - JURO MENSAL").strip()
+    return issuer or PENDING
+
+
+def parse_investment_type(description):
+    """Extract investment type from description (CDB, LCA, LCD, LF, CRA, CRI, DEB, FND)."""
+    match = ISSUER_DESCRIPTION.fullmatch(description)
+    if match:
+        return match.group(1)
+    return PENDING
+
+
+def classify_rentability_type(rentability):
+    """Classify rentability into pre, pos, or ipca based on the text."""
+    if not rentability or rentability == PENDING:
+        return PENDING
+
+    rentability_upper = rentability.upper()
+
+    # IPCA or IPC-A (inflation indexed)
+    if "IPCA" in rentability_upper or "IPC-A" in rentability_upper:
+        return "ipca"
+
+    # CDI (post-fixed)
+    if "CDI" in rentability_upper:
+        return "pos"
+
+    # Pre-fixed: starts with + without CDI, or contains % with a.a./a.m. without CDI/IPCA
+    if (rentability.strip().startswith("+") and "CDI" not in rentability_upper) or \
+       ("%" in rentability and ("A.A." in rentability_upper or "A.M." in rentability_upper) and \
+        "CDI" not in rentability_upper and "IPCA" not in rentability_upper and "IPC-A" not in rentability_upper):
+        return "pre"
+
+    return PENDING
 
 
 def import_rows(rows):
@@ -55,7 +100,7 @@ def import_rows(rows):
         records.append({
             "ticker": description.replace(" ", "_"),
             "description": description,
-            "type": "variavel",
+            "type": classify_rentability_type(rentability),
             "investment_date": iso_date(populated["G"], number, "data aplicação") if populated["G"] else PENDING,
             "due_date": iso_date(populated["H"], number) if populated["H"] else PENDING,
             "quantity": str(quantity) if quantity is not None else PENDING,
@@ -63,6 +108,8 @@ def import_rows(rows):
             "acquisition_price": str(applied) if applied is not None else PENDING,
             "market_rentability": rentability,
             "isin": PENDING,
+            "issuer": parse_issuer(description),
+            "investment_type": parse_investment_type(description),
         })
     if not header_seen or not records:
         raise ValueError("Seção Renda Fixa sem cabeçalho ou títulos")
@@ -84,7 +131,22 @@ def main():
         parser.error(f"arquivo não encontrado em inbox/XP: {args.filename}")
     with ZipFile(source) as archive:
         records = import_rows(read_sheet(archive))
-    added, preserved = write_csv(records, OUTPUT, CSV_FIELDS_RF, {"isin": PENDING})
+    def issuer_from_description(record):
+        return parse_issuer(record["description"])
+    def investment_type_from_description(record):
+        return parse_investment_type(record["description"])
+    def type_from_rentability(record):
+        return classify_rentability_type(record.get("market_rentability", PENDING))
+    added, preserved = write_csv(records, OUTPUT, CSV_FIELDS_RF, {
+        "isin": PENDING,
+        "issuer": issuer_from_description,
+        "investment_type": investment_type_from_description,
+        "type": type_from_rentability,
+    }, pending_updates={
+        "issuer": issuer_from_description,
+        "investment_type": investment_type_from_description,
+        "type": type_from_rentability,
+    })
     print(f"{added} título(s) novo(s); {preserved} registro(s) existente(s) preservado(s) em {OUTPUT.relative_to(ROOT)}")
 
 

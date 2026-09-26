@@ -177,13 +177,17 @@ def _read_existing(output, fieldnames, legacy_defaults):
         return [], False
     with output.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle)
-        migrated = bool(legacy_defaults) and reader.fieldnames == [field for field in fieldnames if field not in legacy_defaults]
+        header = reader.fieldnames or []
+        missing_fields = fieldnames[len(header):] if list(fieldnames[:len(header)]) == header else ()
+        migrated = bool(missing_fields) and bool(legacy_defaults) and all(field in legacy_defaults for field in missing_fields)
         if reader.fieldnames != list(fieldnames) and not migrated:
             raise ValueError(f"Cabeçalho incompatível em {output}")
         records = list(reader)
     if migrated:
         for record in records:
-            record.update(legacy_defaults)
+            for field in missing_fields:
+                default = legacy_defaults[field]
+                record[field] = default(record) if callable(default) else default
     seen = set()
     for record in records:
         ticker = record["ticker"]
@@ -198,12 +202,21 @@ def read_existing(output=None, fieldnames=CSV_FIELDS):
     return records
 
 
-def write_csv(records, output=None, fieldnames=CSV_FIELDS, legacy_defaults=None):
+def write_csv(records, output=None, fieldnames=CSV_FIELDS, legacy_defaults=None, pending_updates=None):
     output = output or OUTPUT
     existing, migrated = _read_existing(output, fieldnames, legacy_defaults)
+    refreshed = False
+    for record in existing:
+        for field, resolver in (pending_updates or {}).items():
+            if record[field] != PENDING:
+                continue
+            value = resolver(record) if callable(resolver) else resolver
+            if value != PENDING:
+                record[field] = value
+                refreshed = True
     known = {record["ticker"] for record in existing}
     additions = [record for record in records if record["ticker"] not in known]
-    if not additions and not migrated:
+    if not additions and not migrated and not refreshed:
         return 0, len(existing)
     output.parent.mkdir(parents=True, exist_ok=True)
     temporary = None
