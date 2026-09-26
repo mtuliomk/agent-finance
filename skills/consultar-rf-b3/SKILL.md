@@ -5,44 +5,62 @@ description: Consulta dados de títulos de renda fixa no banco de dados B3 (ISIN
 
 # Consulta RF - Base B3
 
-Pesquisa em tempo real no banco de dados da B3 (arquivo NUMERACA.TXT) para encontrar títulos de renda fixa com dados estruturados.
+Pesquisa no banco de dados da B3 (arquivo NUMERACA.TXT v1.0) para encontrar títulos de renda fixa com dados estruturados.
 
 ## Entrada
 
 Forneça os filtros desejados (ao menos um):
 - **Emissor**: nome ou código (ex: AGIBANK, AGBK, BANCO XP, BMG)
 - **Tipo**: CDB, CRA, CRI, DEB, LCA, LCD, LF, FND
-- **Vencimento**: data ou período (ex: 2027-07-21, julho/2027, 2027-Q3)
+- **Vencimento**: data ou período (ex: 2027-07-21, 2027-07, 2027, 2027-Q3)
 
 ## Saída
 
 Para cada título encontrado:
-- **ISIN**: Código internacional
-- **Descrição**: Nome completo do título
-- **Tipo**: CDB/CRA/CRI/etc
-- **Emissor**: Código e nome
-- **Vencimento**: Data exacta (AAAA-MM-DD)
-- **Taxa**: Taxa de remuneração (quando informada)
-- **Tipo de remuneração**: Pré-fixado, CDI, IPCA, DI1, etc
-- **Ativo**: Sim/Não na B3
-- **Moeda**: BRL/USD/etc
+- **ISIN**: Código internacional (12 caracteres: BR + 4 emissor + 3 tipo + 2 garantia + 1 controle)
+- **Descrição**: Nome conforme registrado na B3
+- **Emissor**: Código (ex: AGBK) 
+- **Vencimento**: Data exata (YYYY-MM-DD)
+- **Taxa**: Taxa nominal em % (quando aplicável)
+- **Percentual**: Percentual do indexador (ex: 100%, 120% CDI)
+- **Remuneração**: PRE (pré-fixado), DI1/CDI, IPCA, ZERO (zero-cupom), etc
+- **Moeda**: BRL (padrão)
+- **Ativo**: Sim/Não conforme status na B3
+
+## Campos do NUMERACA.TXT (conforme Leiame.pdf)
+
+| Campo | Descrição |
+|-------|-----------|
+| DATA DA GERAÇÃO | Data de referência do arquivo |
+| AÇÃO | N=Novo, A=Alterado, D=Inativado |
+| ISIN | Código internacional |
+| CÓDIGO EMISSOR | 4 caracteres (ex: AGBK=AGIBANK) |
+| DESCRIÇÃO | Nome do título (até 120 chars) |
+| EMISSÃO/VENCIMENTO | Ano e data |
+| TAXA JUROS | Valor em % (pré-fixado) ou indexador |
+| PERCENTUAL INDEXADOR | % CDI, % IPCA, etc |
+| TIPO DE JUROS | Z=Zero-cupom, F=Fixo, V=Variável |
+| INDEXADOR | PRE, DI1, IPCA, IGPD, TR, SELIC, DOL, etc |
 
 ## Como usar
 
 ```bash
-# Buscar todos os CDBs do AGIBANK com vencimento em 2027-07
+# Buscar todos os CDBs do AGIBANK com vencimento em julho/2027
 python scripts/consultar_rf_b3.py --emissor AGIBANK --tipo CDB --vencimento 2027-07
+# Retorna 41 registros
 
-# Buscar por ISIN ou código específico
-python scripts/consultar_rf_b3.py --emissor "BANCO XP" --tipo CDB
+# Buscar por tipo apenas
+python scripts/consultar_rf_b3.py --tipo CRA --vencimento 2027
 
-# Filtro amplo (apenas tipo)
-python scripts/consultar_rf_b3.py --tipo CRA
+# Saída em CSV
+python scripts/consultar_rf_b3.py --tipo CDB --formato csv
 ```
 
 ## Observações
 
-- Base de dados: `/inbox/B3/isinp/NUMERACA.TXT` (atualizada regularmente)
-- Correlação com posições: use o ISIN para atualizar `state/positions/renda_fixa.csv`
-- Dados históricos: arquivo cobre ativos e inativos
-- Precisão: nomes de emissores podem estar abreviados; confirme com documento de custódia
+- **Base**: `/inbox/B3/isinp/NUMERACA.TXT` + `EMISSOR.TXT` (381.794 títulos, 69.404 emissores)
+- **Atualização**: Frequência definida pela B3 (arquivo incluído tem data 2026-09-25)
+- **Status**: Por padrão inclui inativos (D) pois maioria do histórico está inativa
+- **Precisão de vencimento**: Todos os CDBs do arquivo estão vencidos ou em 2027 (base histórica)
+- **Correlação com posições**: Use ISIN para atualizar `state/positions/renda_fixa.csv`
+- **Mapeamento**: Código AGBK↔AGIBANK, XPCE↔XP (via MAPEO_EMISSOR)
