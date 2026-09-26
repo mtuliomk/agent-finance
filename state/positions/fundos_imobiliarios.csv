@@ -1,0 +1,7 @@
+ticker,description,type,investment_date,due_date,quantity,available,acquisition_price
+CPTR11,CPTR11,variavel,[pending],,3000,3000,10.07
+HGLG11,HGLG11,variavel,[pending],,116,116,256.54
+MFII11,MFII11,variavel,[pending],,289,289,113.30
+HCTR11,HCTR11,variavel,[pending],,212,212,124.33
+CTXT11,CTXT11,variavel,[pending],,513,513,46.72
+PATL11,PATL11,variavel,[pending],,300,300,[pending]

@@ -1,0 +1,13 @@
+ticker,description,type,investment_date,due_date,quantity,available,acquisition_price
+Trend_Pós-Fixado_XP_Seg_Prev_FIC_FIRF,Trend Pós-Fixado XP Seg Prev FIC FIRF,pos,[pending],,1,1,30000.00
+XP_Corporate_Top_CP_XP_Seg_Prev_FIC_FIM_RL,XP Corporate Top CP XP Seg Prev FIC FIM RL,pos,[pending],,1,1,30000.00
+XP_Crédito_Estruturado_XP_Seg_Prev_FIC_FIRF,XP Crédito Estruturado XP Seg Prev FIC FIRF,pos,[pending],,1,1,30000.00
+Itaú_Sinfonia_XP_Seg_Prev_FIC_FIM_CP_RL,Itaú Sinfonia XP Seg Prev FIC FIM CP RL,pos,[pending],,1,1,20000.00
+Riza_Lotus_Prev_Xp_Seg_Fic_Fim_Cp,Riza Lotus Prev Xp Seg Fic Fim Cp,pos,[pending],,1,1,15000.00
+XP_CORPORATE_PLUS_PREV_XP_SEG_FIC_RF_CP_RL,XP CORPORATE PLUS PREV XP SEG FIC RF CP RL,pos,[pending],,1,1,11000.00
+XP_Corporate_Top_CP_XP_Seg_Prev_FIC_FIM_RL_2,XP Corporate Top CP XP Seg Prev FIC FIM RL,pos,[pending],,1,1,10071.07
+XP_Corporate_Top_CP_XP_Seg_Prev_FIC_FIM_RL_3,XP Corporate Top CP XP Seg Prev FIC FIM RL,pos,[pending],,1,1,10071.07
+Trend_Pós-Fixado_XP_Seg_Prev_FIC_FIRF_2,Trend Pós-Fixado XP Seg Prev FIC FIRF,pos,[pending],,1,1,10000.00
+Arca_Grão_XP_Seg_Prev_Advisory_FIC_FIM,Arca Grão XP Seg Prev Advisory FIC FIM,multi,[pending],,1,1,10000.00
+Arca_Grão_XP_Seg_Prev_Advisory_FIC_FIM_2,Arca Grão XP Seg Prev Advisory FIC FIM,multi,[pending],,1,1,10000.00
+XP_Income_FIE_Seg_FIE_FIC_FIRF_RL,XP Income FIE Seg FIE FIC FIRF RL,pre,[pending],,1,1,20000.00

@@ -1,0 +1,10 @@
+ticker,description,type,investment_date,due_date,quantity,available,acquisition_price
+SBSP3,SBSP3,variavel,[pending],,1541,1541,[pending]
+GOAU3,GOAU3,variavel,[pending],,2666,2666,5.18
+CMIG4,CMIG4,variavel,[pending],,1959,1959,7.63
+BBDC4,BBDC4,variavel,[pending],,1000,1000,13.50
+CSED3,CSED3,variavel,[pending],,1079,1079,14.00
+DMVF3,DMVF3,variavel,[pending],,18,18,17.00
+AMER3,AMER3,variavel,[pending],,10,10,105.00
+BHIA3,BHIA3,variavel,[pending],,32,32,484.25
+WEST3,WEST3,variavel,[pending],,5,5,130.00

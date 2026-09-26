@@ -1,9 +1,5 @@
-inbox/*
-!inbox/.gitkeep
 state/raw/*
 !state/raw/.gitkeep
-state/positions/*
-!state/positions/.gitkeep
 
 .env
 .env.*
