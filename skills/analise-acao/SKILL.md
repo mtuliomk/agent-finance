@@ -1,14 +1,13 @@
 ---
 name: analise-acao
-description: Analisa uma ação, tese e faixa de valuation com dados publicados; use para compra, manutenção ou venda de ação individual.
+description: Analisa tese e faixa de valuation para compra, manutenção ou venda de ação individual.
 ---
 
 # Análise de ação
 
-**Consultar:** `knowledge/acoes-valuation.md`, `knowledge/portfolio.md`, snapshot se há posição; decisões do mesmo ticker. Use `make fontes-listar TOPIC=acoes` para localizar documentos; pesquise preço datado e eventos recentes por fonte primária.
+Leia `knowledge/acoes-valuation.md`. Posição existente/impacto na carteira → `knowledge/portfolio.md` e dados pertinentes; histórico → somente decisões do ticker.
 
-1. Identifique ticker, empresa, período dos demonstrativos e pergunta decisória. Resuma negócio, caixa, dívida, governança e riscos com fontes.
-2. Escolha método de valuation adequado, declare premissas e mostre faixa/sensibilidade. Compare com preço datado, custos e alternativa relevante; se posição existente, calcule efeito no peso da carteira.
-3. Separe fatos reportados, estimativas e opinião. Verifique notícia material antes de concluir.
+1. Identifique ticker, empresa, pergunta e período dos demonstrativos. Localize documentos via `make fontes-listar TOPIC=acoes`; consulte preço datado e eventos materiais recentes.
+2. Aplique o método de valuation, compare preço, custos e alternativa relevante. Havendo posição, calcule efeito no peso/correlação da carteira.
 
-**Saída:** tese, números com período/fonte, valuation em cenários, riscos e condições de revisão. **Qualidade:** não usar projeção como dado realizado nem preço antigo como atual.
+Entregue tese, números com período/fonte, valuation em cenários, riscos e condições de revisão. Projeção não é resultado realizado; preço antigo não é atual.

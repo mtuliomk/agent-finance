@@ -2,7 +2,7 @@
 
 `make xp-import-rf FILE=nome.xlsx` lê a aba `Sua carteira` do arquivo em `inbox/XP/` e acrescenta a `state/positions/renda_fixa.csv` somente títulos com `ticker` novo. IDs existentes são preservados; uma reimportação sem IDs novos não regrava o CSV, exceto para migrar cabeçalhos anteriores sem `isin` e/ou `issuer` ou preencher `issuer` ainda `[pending]` quando a descrição permitir.
 
-O importador lê o bloco **Renda Fixa** e confere a soma da coluna `Saldo a mercado` com o total da seção. O export atual apresenta diferença de R$ 0,03 entre a soma dos 174 saldos exibidos e o total; a conciliação aceita diferença de arredondamento de até R$ 0,05, limitada também a R$ 0,005 por linha mais R$ 0,005 para o total. Diferenças maiores interrompem a importação. Cada linha vira um registro; nomes repetidos recebem sufixos `_2`, `_3` etc. O CSV usa UTF-8, datas `YYYY-MM-DD`, inteiros sem separador de milhar e valores monetários decimais com ponto, sem `R$`.
+O importador lê o bloco **Renda Fixa** e confere a soma da coluna `Saldo a mercado` com o total da seção. A conciliação aceita diferença de arredondamento de até R$ 0,05, limitada também a R$ 0,005 por linha mais R$ 0,005 para o total. Diferenças maiores interrompem a importação. Cada linha vira um registro; nomes repetidos recebem sufixos `_2`, `_3` etc. O CSV usa UTF-8, datas `YYYY-MM-DD`, inteiros sem separador de milhar e valores monetários decimais com ponto, sem `R$`.
 
 | Campo | Origem/regra |
 | --- | --- |

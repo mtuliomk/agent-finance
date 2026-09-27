@@ -1,0 +1,10 @@
+{
+  "source": "knowledge/schema-renda-fixa.md anterior à otimização de 2026-09-27",
+  "as_of": null,
+  "status": "historical_observation_not_revalidated",
+  "observation": {
+    "rows": 174,
+    "displayed_balance_difference_brl": "0.03"
+  },
+  "limitation": "Observação sobre o export então descrito como atual; não prova data/cobertura de novos exports."
+}

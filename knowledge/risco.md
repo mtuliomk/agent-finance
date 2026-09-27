@@ -1,7 +1,9 @@
 # Risco de carteira
 
-Agrupe crédito por **emissor econômico/conglomerado**, somando custodiantes e produtos elegíveis; corretora não é o emissor do CDB. Confirme grupo, elegibilidade e regra vigente na [fonte primária do FGC](https://fgc.org.br/sobre-garantia-fgc) em cada decisão. Referência verificada em 2026-09-26: garantia ordinária de até R$ 250 mil por CPF/CNPJ e instituição/conglomerado, com teto de R$ 1 milhão de garantias pagas em quatro anos. Inclua juros projetados até evento relevante no teste de limite, não apenas principal; limites e interpretação precisam de reconfirmação.
+Crédito se agrega por **emissor econômico/conglomerado**, entre custodiantes e produtos elegíveis; corretora não é emissor. Grupo ausente é exposição **não classificada**, não diversificada. Para CRI/CRA, devedor e securitizadora podem diferir.
 
-Analise também concentração não coberta, qualidade do emissor, correlação entre bancos, prazo, capacidade de sair, marcação a mercado e descasamento de liquidez. Se `conglomerate` vier vazio no state, marque exposição como **não classificada**, não como diversificada. CRI, ações e FIIs não entram na soma de produtos cobertos sem verificação de elegibilidade.
+FGC: confirme elegibilidade, associação, grupo, limites por titular/instituição e teto global/janela vigentes nas fontes `fgc-cobertura` e `fgc-conglomerados` (`make fontes-listar TOPIC=credito`). Compare principal **mais juros projetados** até evento relevante; consumo do teto global exige histórico de garantias pagas. Cobertura jurídica não é liquidez imediata. Não estenda garantia a CRI, ações ou FIIs por analogia.
 
-Sem pesos atuais fornecidos pelo titular, não invente uma política numérica. Reporte concentração e proponha limites como opções para validação, distinguindo regra legal de preferência pessoal.
+Avalie concentração não coberta, qualidade e correlação dos emissores, prazo, marcação a mercado, preço/capacidade de saída e descasamento de caixa. Distinga restrição legal de limite pessoal: sem política numérica declarada, apresente exposição e limites como opções para validação.
+
+Valores regulatórios anteriormente citados: `state/reference/regulatory-2026-09-26.json`, apenas para reconstrução histórica; não são regra vigente confirmada.

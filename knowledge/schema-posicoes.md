@@ -1,6 +1,6 @@
 # Contrato de posições v1
 
-`state/positions/{XP|BTG}.csv` contém o **último snapshot completo aceito por custodiante**; `manifest.json` registra origem e versões. `history/` guarda snapshots anteriores. Tudo em `state/` é privado e ignorado pelo Git. Sem arquivo real, não existe carteira atual na workspace.
+`state/positions/{XP|BTG}.csv` contém o **último snapshot completo aceito por custodiante**; `manifest.json` registra origem e versões. `history/` guarda snapshots anteriores. Dados de `state/` são privados; não presuma que estejam ignorados pelo Git. Sem arquivo real, não existe carteira atual na workspace.
 
 ## CSV canônico
 
@@ -20,10 +20,6 @@ custodian,position_id,asset_class,instrument_name,instrument_id,issuer,conglomer
 - `liquidity_terms`: texto fiel do contrato/export, sem converter "vencimento" em "liquidez".
 - `source_locator`: aba+linha do XLSX ou página+item do PDF; permite conferência. `notes`: ambiguidade de extração, unidade, premissa ou classificação.
 
-## Ingestão e reconciliação
+## Proveniência
 
-Coloque o original em `inbox/`. Para XLSX, inspecione abas/cabeçalhos e exporte a aba relevante a CSV via LibreOffice, se disponível, sem alterar o original; para PDF, `pdftotext -layout` ajuda leitura, mas cada linha deve ser conferida visualmente. Transcreva/mapeie para o CSV canônico em `inbox/`. Não há mapeamento universal seguro para exports XP/BTG ainda não fornecidos.
-
-Valide IDs duplicados, data, tipos e valores com `make posicoes-previa CSV=... SOURCE=... CUSTODIAN=XP AS_OF=AAAA-MM-DD`. Concilie contagem e total reportado por classe/moeda com o original; compare posições removidas e alterações grandes com o snapshot anterior. Só após confirmar que o arquivo cobre **toda** a custódia daquela data, execute `make posicoes-publicar` com as mesmas variáveis e `CONFIRMED_COMPLETE=yes` (`ACCEPT_REMOVALS=yes` apenas se as saídas foram conferidas). Nunca some snapshots de datas distintas sem explicitar a defasagem. Um PDF de posição pode corroborar um XLSX, mas não substitui valores silenciosamente; divergências ficam em `notes` ou impedem a publicação até resolução.
-
-O script arquiva a origem em `state/raw/` com hash SHA-256, grava histórico e atualiza apenas o custodiante importado. `manifest.json` contém data da foto, importação, hash e caminho privado do original. Não armazena cotações externas, transações nem inferência de variação patrimonial.
+`manifest.json` registra data da foto, importação, hash SHA-256/caminho privado da origem, versão/caminho do snapshot, contagem e avisos. Não armazena cotações externas ou transações. Procedimento de extração, conciliação e publicação: `skills/ingestao-posicoes/SKILL.md`.

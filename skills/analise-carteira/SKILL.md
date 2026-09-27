@@ -1,14 +1,14 @@
 ---
 name: analise-carteira
-description: Analisa alocação, exposição e lacunas da carteira pessoal a partir dos snapshots locais; use em perguntas sobre carteira atual ou rebalanceamento.
+description: Analisa alocação, exposição e rebalanceamento da carteira pessoal a partir das posições locais.
 ---
 
 # Análise de carteira
 
-**Consultar:** `knowledge/portfolio.md`, `knowledge/schema-posicoes.md`, `state/positions/manifest.json` e snapshots disponíveis; `knowledge/risco.md` para crédito. Web só para indicadores/preços externos necessários, conforme `knowledge/fontes.md`.
+Leia `knowledge/portfolio.md`; abra manifesto/snapshots existentes ou os recortes e schemas necessários. Para interpretar campos canônicos, consulte `knowledge/schema-posicoes.md`.
 
-1. Verifique datas, custodiantes cobertos, posições sem `market_value` e moedas. Não chame fotografia incompleta de carteira total. Agregue por classe, emissor/conglomerado, vencimento e liquidez; não some moedas sem câmbio datado.
-2. Compare concentração e necessidade de caixa com a política pessoal explícita; onde não há limite definido, mostre exposição e peça o critério antes de rotular excesso subjetivo. Acione `analise-risco` para FGC/crédito.
-3. Para alternativas, use `comparar-investimentos`; confirme ofertas via fonte atual. Separe diagnóstico, hipótese e proposta.
+1. Verifique datas, custodiantes, moedas e valores ausentes. Concilie totais; declare cobertura e denominador dos percentuais. Fotografia incompleta não é carteira total.
+2. Agregue por classe, emissor/conglomerado, vencimento e liquidez. Compare necessidade de caixa e política pessoal explícita; sem limite definido, mostre exposição e peça critério antes de rotular excesso.
+3. Crédito/FGC → `skills/analise-risco/SKILL.md`; alternativas → `skills/comparar-investimentos/SKILL.md`. Consulte preços/indicadores externos apenas quando necessários.
 
-**Saída:** data-base/cobertura, tabela de valores e percentuais calculáveis, concentrações, vencimentos/liquidez, riscos, lacunas e próximos dados úteis. **Qualidade:** totais conciliados ao snapshot, denominador declarado e nenhuma posição presumida.
+Entregue data-base/cobertura, valores/percentuais calculáveis, concentração, vencimentos/liquidez, riscos, lacunas e próximos dados úteis. Separe diagnóstico de proposta.

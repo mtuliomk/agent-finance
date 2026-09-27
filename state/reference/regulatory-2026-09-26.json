@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "historical_not_revalidated",
+  "recorded_verification_date": "2026-09-26",
+  "provenance": "Migrado de knowledge/risco.md e knowledge/tributacao.md em 2026-09-27; a data de verificação é a declarada nesses textos, não uma nova consulta.",
+  "usage": "Somente reconstrução histórica; confirmar produto, vigência, exceções e fonte antes de qualquer cálculo decisório.",
+  "fgc": {
+    "currency": "BRL",
+    "ordinary_limit_per_holder_and_institution_or_group": 250000,
+    "holder_types": [
+      "CPF",
+      "CNPJ"
+    ],
+    "global_paid_guarantees_limit": 1000000,
+    "global_window_years": 4,
+    "source": "https://fgc.org.br/sobre-garantia-fgc"
+  },
+  "brazil_taxable_fixed_income": {
+    "basis": "rendimento tributável no evento aplicável",
+    "brackets": [
+      {
+        "min_days": 0,
+        "max_days": 180,
+        "rate_percent": 22.5
+      },
+      {
+        "min_days": 181,
+        "max_days": 360,
+        "rate_percent": 20
+      },
+      {
+        "min_days": 361,
+        "max_days": 720,
+        "rate_percent": 17.5
+      },
+      {
+        "min_days": 721,
+        "max_days": null,
+        "rate_percent": 15
+      }
+    ],
+    "source": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta/normas.fazenda.gov.br/sijut2consulta/link.action?idAto=67494&visao=original"
+  },
+  "foreign_financial_investments": {
+    "scope": "Pessoa física residente; em regra rendimentos de aplicações financeiras no exterior no ajuste anual. Não generalizar a toda operação internacional.",
+    "rate_percent": 15,
+    "source": "https://presidencia.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14754.htm"
+  }
+}

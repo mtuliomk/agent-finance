@@ -1,14 +1,14 @@
 ---
 name: revisar-decisao
-description: Revisa uma decisão anterior usando premissas originais e evidência nova; use para checar tese, erro ou gatilho de revisão.
+description: Revisa decisão ou tese anterior, comparando premissas originais com evidência nova.
 ---
 
-# Revisão de decisão
+# Revisar decisão
 
-**Consultar:** arquivo específico em `decisions/`, `knowledge/schema-decisoes.md`, snapshot original citado e atual, knowledge temático. Web para fatos posteriores datados.
+Localize o arquivo por ativo/tese com `rg -l` em `decisions/`; para FIIs de 2026-09-26, comece pelo índice compacto dessa pesquisa. Leia só o registro pertinente e `knowledge/schema-decisoes.md`. Snapshots original/atual → `knowledge/portfolio.md`; métodos → knowledge temático necessário.
 
-1. Confirme se o registro é decisão `tomada` ou `reconstrução pendente`. Pine/BMG atuais são pendências: peça fatos antes de julgar acerto da decisão.
-2. Reconstrua o que era conhecido na data, premissas e alternativa; separe informação disponível então de informação posterior. Recalcule só com fontes e parâmetros identificados.
-3. Verifique gatilhos de revisão, impacto real, custos de mudança e risco atual. Se titular declarar nova decisão, acrescente seção datada ou novo arquivo vinculado, preservando o registro anterior.
+1. Confira status real: decisão tomada, pesquisa ou reconstrução pendente. Peça fatos ausentes antes de julgar acerto; não transforme pendência em decisão.
+2. Reconstrua conhecimento da época, premissas e alternativas. Consulte fatos posteriores datados separadamente; recalcule apenas parâmetros rastreáveis.
+3. Verifique gatilhos, impacto real, custo de mudança e risco atual. Registro autorizado preserva texto anterior em seção datada ou novo arquivo vinculado.
 
-**Saída:** tese original, fatos novos, premissas mantidas/rompidas, opções e próximo gatilho. **Qualidade:** sem viés retrospectivo nem alteração silenciosa do histórico.
+Entregue tese original, fatos novos, premissas mantidas/rompidas, opções e gatilho seguinte, sem viés retrospectivo.

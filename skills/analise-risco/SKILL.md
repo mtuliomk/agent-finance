@@ -1,14 +1,14 @@
 ---
 name: analise-risco
-description: Avalia concentração, crédito, liquidez e cobertura FGC da carteira ou de uma compra proposta; use em risco por emissor e limites de garantia.
+description: Avalia concentração, crédito, liquidez e FGC da carteira ou de uma compra proposta.
 ---
 
 # Análise de risco
 
-**Consultar:** `knowledge/risco.md`, `knowledge/portfolio.md`, snapshots e manifesto; `knowledge/tributacao.md` se venda for mitigação. Use `make fontes-listar TOPIC=credito` para localizar FGC e fontes de crédito; pesquise emissor/BCB conforme necessidade.
+Leia `knowledge/risco.md`. Para posições, leia `knowledge/portfolio.md` e os snapshots/recortes pertinentes; para venda como mitigação, `knowledge/tributacao.md`.
 
-1. Agrupe CDB/LCA elegíveis por instituição/conglomerado em todas as custódias disponíveis; liste agrupamentos desconhecidos. Confirme produto, emissor e regra FGC vigente.
-2. Compare saldo atual e juros projetados com limite aplicável; reporte também consumo do teto global de quatro anos somente se o histórico de garantias pagas for conhecido. Não chame cobertura jurídica de liquidez imediata.
-3. Examine riscos não cobertos: CRI, ações, FIIs, correlação entre emissores, prazos e preço de saída. Proponha mitigação e custos, sem inventar limite pessoal.
+1. Aplique a agregação por emissor/conglomerado do método de risco; confirme emissor/BCB e regras atuais nas fontes de `make fontes-listar TOPIC=credito`.
+2. Calcule saldo mais juros contra limites confirmados. Declare cobertura dos custodiantes, grupos não classificados e eventual ausência do histórico de garantias pagas.
+3. Avalie riscos não cobertos e proponha mitigação com custos.
 
-**Saída:** matriz por emissor/conglomerado, cobertura potencial e incertezas, concentrações e opções de mitigação. **Qualidade:** custodiante não substitui emissor; ausência de dados não vira cobertura presumida.
+Entregue matriz por emissor/conglomerado, cobertura potencial e incertezas, concentração e opções de mitigação.

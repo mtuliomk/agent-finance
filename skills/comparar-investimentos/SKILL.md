@@ -1,14 +1,14 @@
 ---
 name: comparar-investimentos
-description: Compara alternativas de investimento na mesma base econômica e temporal; use quando o titular escolher entre produtos ou classes.
+description: Compara produtos ou classes na mesma base econômica e temporal para uma escolha de investimento.
 ---
 
-# Comparação de investimentos
+# Comparar investimentos
 
-**Consultar:** `knowledge/portfolio.md`, `knowledge/renda-fixa.md`, `knowledge/risco.md`, `knowledge/tributacao.md`; snapshot se a comparação afeta a carteira. Filtre o catálogo via `make fontes-listar TOPIC=TEMA`; ofertas atuais vêm de web/documento com data e condições.
+Leia `knowledge/tributacao.md` quando houver incidência tributária e `knowledge/risco.md` para concentração/crédito/FGC. Renda fixa/reinvestimento → `knowledge/renda-fixa.md`; ação → `knowledge/acoes-valuation.md`; impacto na carteira → `knowledge/portfolio.md` e posição pertinente.
 
-1. Fixe aporte disponível, horizonte, moeda, objetivo e necessidade de liquidez. Confirme se ofertas são de fato acessíveis e vigentes; preço indicativo não é execução.
-2. Normalize retorno líquido no mesmo horizonte, incluindo taxas, impostos, câmbio e reinvestimento quando aplicáveis. Não reduza risco de crédito, mercado e liquidez a um único percentual.
-3. Mostre matriz com retorno/cenários, risco, liquidez, FGC quando elegível, concentração incremental e dados faltantes. Ordene apenas quando premissas sustentarem ordenação.
+1. Fixe aporte, horizonte, moeda, objetivo e liquidez necessária. Consulte fontes do tema com `make fontes-listar TOPIC=TEMA`; confirme acessibilidade/vigência da oferta. Preço indicativo não é execução.
+2. Normalize retorno líquido no mesmo horizonte/data-base, com custos, impostos, câmbio e reinvestimento aplicáveis. Não reduza crédito, mercado e liquidez a um único percentual.
+3. Monte matriz de retorno/cenários, risco, liquidez, FGC elegível, concentração incremental e lacunas. Ordene só se as premissas sustentarem.
 
-**Saída:** alternativas, premissas, comparação e recomendação condicionada ao objetivo. **Qualidade:** mesma data-base e unidades, fonte por oferta e indicação clara do que ainda precisa confirmar.
+Entregue fontes por oferta, premissas/unidades, comparação e recomendação condicionada ao objetivo.

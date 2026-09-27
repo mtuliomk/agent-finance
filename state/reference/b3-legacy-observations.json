@@ -1,0 +1,15 @@
+{
+  "source": "skills/consultar-rf-b3/SKILL.md anterior à otimização de 2026-09-27",
+  "status": "historical_claims_not_revalidated",
+  "claimed_base_date": "2026-09-25",
+  "claimed_security_count": 381794,
+  "claimed_issuer_count": 69404,
+  "claimed_example_results": {
+    "isin_BRAGBKC00JG1": 1,
+    "AGIBANK_CDB_2027_07": 41
+  },
+  "claimed_coverage": "Todos os CDBs do arquivo estão vencidos ou em 2027 (base histórica).",
+  "claimed_isin_structure": "12 caracteres: BR + 4 emissor + 3 tipo + 2 garantia + 1 controle",
+  "claimed_layout": "NUMERACA.TXT v1.0; DATA DA GERAÇÃO, AÇÃO (N=Novo, A=Alterado, D=Inativado), ISIN, CÓDIGO EMISSOR, DESCRIÇÃO até 120 caracteres, EMISSÃO/VENCIMENTO, TAXA JUROS, PERCENTUAL INDEXADOR, TIPO DE JUROS (Z=Zero-cupom, F=Fixo, V=Variável), INDEXADOR (PRE, DI1, IPCA, IGPD, TR, SELIC, DOL).",
+  "limitation": "Afirmações migradas, não validadas nesta passagem; obter contagens/datas da base e confirmar layout no Leiame.pdf. Não usar para concluir cobertura ou identidade atual."
+}

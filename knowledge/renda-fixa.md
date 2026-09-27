@@ -10,3 +10,5 @@ Em CDB, compare fluxos **líquidos na mesma data final**, não taxas de vitrine.
 Taxa prefixada, `% CDI`, `CDI + spread` e IPCA+ não são diretamente comparáveis: explicite trajetória de índice, inflação e datas. LCA pode ter tratamento tributário distinto; CRI tem risco e liquidez próprios. Nunca aplique cobertura FGC a CRI por analogia.
 
 Liquidez significa possibilidade, prazo e preço de venda, não somente vencimento. Considere necessidade de caixa, spread de mercado e concentração antes de maximizar valor esperado.
+
+Em horizonte curto, o deságio composto pode consumir a vantagem da taxa maior; teste com dados do caso. O risco de reinvestimento pode superar o ganho de esperar, inclusive em cenário de Selic em queda: taxa futura é premissa, não fato.

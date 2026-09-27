@@ -1,0 +1,1523 @@
+{
+  "method": "sum per file ceil(Unicode characters / 4); estimate, not GPT-6 Luna tokenization; binary tokens unestimated",
+  "excluded": [
+    ".agents",
+    ".codex",
+    ".git",
+    ".pytest_cache",
+    ".venv",
+    "__pycache__",
+    "docs/context-baseline.json",
+    "docs/context-footprint.json",
+    "docs/context-optimization.md",
+    ".env*"
+  ],
+  "before": {
+    "groups": {
+      "code_tests_and_config": {
+        "files": 18,
+        "bytes": 94930,
+        "estimated_text_tokens": 23649
+      },
+      "global": {
+        "files": 1,
+        "bytes": 4592,
+        "estimated_text_tokens": 1115
+      },
+      "history": {
+        "files": 7,
+        "bytes": 53194,
+        "estimated_text_tokens": 12875
+      },
+      "data_and_originals": {
+        "files": 18,
+        "bytes": 103005272,
+        "estimated_text_tokens": 25370481
+      },
+      "on_demand_guidance_and_catalog": {
+        "files": 25,
+        "bytes": 49286,
+        "estimated_text_tokens": 12006
+      }
+    },
+    "files": 69,
+    "bytes": 103207274,
+    "estimated_text_tokens": 25420126,
+    "estimated_markdown_tokens": 31683
+  },
+  "after": {
+    "groups": {
+      "code_tests_and_config": {
+        "files": 20,
+        "bytes": 103460,
+        "estimated_text_tokens": 25782
+      },
+      "global": {
+        "files": 1,
+        "bytes": 2382,
+        "estimated_text_tokens": 579
+      },
+      "history": {
+        "files": 8,
+        "bytes": 54411,
+        "estimated_text_tokens": 13168
+      },
+      "optional_maintenance_docs": {
+        "files": 1,
+        "bytes": 2548,
+        "estimated_text_tokens": 612
+      },
+      "data_and_originals": {
+        "files": 23,
+        "bytes": 103009595,
+        "estimated_text_tokens": 25371543
+      },
+      "on_demand_guidance_and_catalog": {
+        "files": 29,
+        "bytes": 49003,
+        "estimated_text_tokens": 11941
+      }
+    },
+    "files": 82,
+    "bytes": 103221399,
+    "estimated_text_tokens": 25423625,
+    "estimated_markdown_tokens": 32116
+  },
+  "files": {
+    ".gitattributes": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 34,
+        "characters": 34,
+        "estimated_tokens": 9,
+        "sha256": "eab40a445152f0f3c68f0f254071335f1179822a9cbc4cf735eed6772b4c7add"
+      },
+      "after": {
+        "bytes": 34,
+        "characters": 34,
+        "estimated_tokens": 9,
+        "sha256": "eab40a445152f0f3c68f0f254071335f1179822a9cbc4cf735eed6772b4c7add"
+      },
+      "change": "unchanged"
+    },
+    ".gitignore": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 152,
+        "characters": 152,
+        "estimated_tokens": 38,
+        "sha256": "0ae6ae2408e9ef43114ca27ec9ff178cc4788dd3d444b181fe1011a448aaf9d1"
+      },
+      "after": {
+        "bytes": 152,
+        "characters": 152,
+        "estimated_tokens": 38,
+        "sha256": "0ae6ae2408e9ef43114ca27ec9ff178cc4788dd3d444b181fe1011a448aaf9d1"
+      },
+      "change": "unchanged"
+    },
+    "AGENTS.md": {
+      "category": "global",
+      "before": {
+        "bytes": 4592,
+        "characters": 4459,
+        "estimated_tokens": 1115,
+        "sha256": "feba7a9936baed985cc9338762a92e921457542e5267dee8f5c36e2c160112af"
+      },
+      "after": {
+        "bytes": 2382,
+        "characters": 2314,
+        "estimated_tokens": 579,
+        "sha256": "8e38ca1921eb064804f84e27f6afc151b74bf825cac1e6fcb6a6d9a95cd169ea"
+      },
+      "change": "modified"
+    },
+    "Makefile": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 4409,
+        "characters": 4395,
+        "estimated_tokens": 1099,
+        "sha256": "6ec8d77b7acc450f757e2a81484029eee892767dff4806687348c5bad1a0169d"
+      },
+      "after": {
+        "bytes": 4409,
+        "characters": 4395,
+        "estimated_tokens": 1099,
+        "sha256": "6ec8d77b7acc450f757e2a81484029eee892767dff4806687348c5bad1a0169d"
+      },
+      "change": "unchanged"
+    },
+    "decisions/archive/indice-pesquisa-fiis-2026-09-26-original.md": {
+      "category": "history",
+      "before": null,
+      "after": {
+        "bytes": 8935,
+        "characters": 8667,
+        "estimated_tokens": 2167,
+        "sha256": "532be4f092c66cb2a0a79b2a173925bdbf9b78a81166254d8f5f469dd9ccc45c"
+      },
+      "change": "added"
+    },
+    "decisions/guia-coleta-restante.md": {
+      "category": "history",
+      "before": {
+        "bytes": 11528,
+        "characters": 11206,
+        "estimated_tokens": 2802,
+        "sha256": "ff6498ec35a2d91454ad0624c979df47655f5c5a71bad132a19a6c01d69a9404"
+      },
+      "after": {
+        "bytes": 11528,
+        "characters": 11206,
+        "estimated_tokens": 2802,
+        "sha256": "ff6498ec35a2d91454ad0624c979df47655f5c5a71bad132a19a6c01d69a9404"
+      },
+      "change": "unchanged"
+    },
+    "decisions/indice-pesquisa-fiis-2026-09-26.md": {
+      "category": "history",
+      "before": {
+        "bytes": 8935,
+        "characters": 8667,
+        "estimated_tokens": 2167,
+        "sha256": "532be4f092c66cb2a0a79b2a173925bdbf9b78a81166254d8f5f469dd9ccc45c"
+      },
+      "after": {
+        "bytes": 1217,
+        "characters": 1169,
+        "estimated_tokens": 293,
+        "sha256": "39c8ce7a1e685a6eb4a00de3b2c38cef9b096f03fb729392fd69acbeaf67e888"
+      },
+      "change": "modified"
+    },
+    "decisions/pesquisa-fiis-2026-09-26.md": {
+      "category": "history",
+      "before": {
+        "bytes": 11407,
+        "characters": 10925,
+        "estimated_tokens": 2732,
+        "sha256": "36acf76eb338da738d2b4b4994c718cac8f447667d53a9f962d92df99f6c109c"
+      },
+      "after": {
+        "bytes": 11407,
+        "characters": 10925,
+        "estimated_tokens": 2732,
+        "sha256": "36acf76eb338da738d2b4b4994c718cac8f447667d53a9f962d92df99f6c109c"
+      },
+      "change": "unchanged"
+    },
+    "decisions/pesquisa-fiis-fontes-confiáveis.md": {
+      "category": "history",
+      "before": {
+        "bytes": 8722,
+        "characters": 8478,
+        "estimated_tokens": 2120,
+        "sha256": "10b13b1ec4ee0d299c84968958842ed64831a4d22c0ffa0eda095ab0aab672e0"
+      },
+      "after": {
+        "bytes": 8722,
+        "characters": 8478,
+        "estimated_tokens": 2120,
+        "sha256": "10b13b1ec4ee0d299c84968958842ed64831a4d22c0ffa0eda095ab0aab672e0"
+      },
+      "change": "unchanged"
+    },
+    "decisions/resumo-executivo-fiis-validado.md": {
+      "category": "history",
+      "before": {
+        "bytes": 10901,
+        "characters": 10579,
+        "estimated_tokens": 2645,
+        "sha256": "e894855b5596aa226e48e214e5d79010ec8daf70777f9b096b6897b770467cfd"
+      },
+      "after": {
+        "bytes": 10901,
+        "characters": 10579,
+        "estimated_tokens": 2645,
+        "sha256": "e894855b5596aa226e48e214e5d79010ec8daf70777f9b096b6897b770467cfd"
+      },
+      "change": "unchanged"
+    },
+    "decisions/sem-data-cdb-banco-bmg.md": {
+      "category": "history",
+      "before": {
+        "bytes": 849,
+        "characters": 816,
+        "estimated_tokens": 204,
+        "sha256": "51ce56c58565514ee6a72fe6b0dcce35a67306401a3ba1098da1052a8ff1d262"
+      },
+      "after": {
+        "bytes": 849,
+        "characters": 816,
+        "estimated_tokens": 204,
+        "sha256": "51ce56c58565514ee6a72fe6b0dcce35a67306401a3ba1098da1052a8ff1d262"
+      },
+      "change": "unchanged"
+    },
+    "decisions/sem-data-cdb-banco-pine.md": {
+      "category": "history",
+      "before": {
+        "bytes": 852,
+        "characters": 819,
+        "estimated_tokens": 205,
+        "sha256": "fbe40977f44a0d62d2e9b27967656a222541d8d2d48e527d6db9ef23a0f0fbb3"
+      },
+      "after": {
+        "bytes": 852,
+        "characters": 819,
+        "estimated_tokens": 205,
+        "sha256": "fbe40977f44a0d62d2e9b27967656a222541d8d2d48e527d6db9ef23a0f0fbb3"
+      },
+      "change": "unchanged"
+    },
+    "docs/mcp-data.md": {
+      "category": "optional_maintenance_docs",
+      "before": null,
+      "after": {
+        "bytes": 2548,
+        "characters": 2446,
+        "estimated_tokens": 612,
+        "sha256": "89b21ffecf12a6d1c03532c9736d56dadcdaa1be93baf55f3db00ed26a64a85d"
+      },
+      "change": "added"
+    },
+    "inbox/.gitkeep": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 1,
+        "characters": 1,
+        "estimated_tokens": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "after": {
+        "bytes": 1,
+        "characters": 1,
+        "estimated_tokens": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "change": "unchanged"
+    },
+    "inbox/B3/isinp/EMISSOR.TXT": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 7386015,
+        "characters": 7348427,
+        "estimated_tokens": 1837107,
+        "sha256": "9d20c5f97306e98f68e1ba03d130341bd9df14b80a559a76d6e8c006d1829bc9"
+      },
+      "after": {
+        "bytes": 7386015,
+        "characters": 7348427,
+        "estimated_tokens": 1837107,
+        "sha256": "9d20c5f97306e98f68e1ba03d130341bd9df14b80a559a76d6e8c006d1829bc9"
+      },
+      "change": "unchanged"
+    },
+    "inbox/B3/isinp/Leiame.pdf": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 1361617,
+        "characters": null,
+        "estimated_tokens": null,
+        "sha256": "6002dc820467643b89ffaffff55d1fd1d9e6c844e772cc7d96e40712bd974221"
+      },
+      "after": {
+        "bytes": 1361617,
+        "characters": null,
+        "estimated_tokens": null,
+        "sha256": "6002dc820467643b89ffaffff55d1fd1d9e6c844e772cc7d96e40712bd974221"
+      },
+      "change": "unchanged"
+    },
+    "inbox/B3/isinp/NUMERACA.TXT": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 94146887,
+        "characters": 94062473,
+        "estimated_tokens": 23515619,
+        "sha256": "18a897da085a93ad61684621ea86a0c8c38ebba15d0b9d3ddb39cd0e9bc203c4"
+      },
+      "after": {
+        "bytes": 94146887,
+        "characters": 94062473,
+        "estimated_tokens": 23515619,
+        "sha256": "18a897da085a93ad61684621ea86a0c8c38ebba15d0b9d3ddb39cd0e9bc203c4"
+      },
+      "change": "unchanged"
+    },
+    "inbox/XP/20260926-PosicaoDetalhada.xlsx": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 32091,
+        "characters": null,
+        "estimated_tokens": null,
+        "sha256": "7658ae55167578412bb2c535de5f0e199247a3a1fd993842d3943e570fc5c4f4"
+      },
+      "after": {
+        "bytes": 32091,
+        "characters": null,
+        "estimated_tokens": null,
+        "sha256": "7658ae55167578412bb2c535de5f0e199247a3a1fd993842d3943e570fc5c4f4"
+      },
+      "change": "unchanged"
+    },
+    "inbox/indice-pesquisa-fiis-2026-09-26.md": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 6532,
+        "characters": 6301,
+        "estimated_tokens": 1576,
+        "sha256": "fb0433e90e7545f35ab1b09d251a2d33cff64f373feaa9382fa09e7bdd66dde1"
+      },
+      "after": {
+        "bytes": 6532,
+        "characters": 6301,
+        "estimated_tokens": 1576,
+        "sha256": "fb0433e90e7545f35ab1b09d251a2d33cff64f373feaa9382fa09e7bdd66dde1"
+      },
+      "change": "unchanged"
+    },
+    "knowledge/acoes-valuation.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 773,
+        "characters": 749,
+        "estimated_tokens": 188,
+        "sha256": "a43d0ceb145f498467e30846ab41fff3dec9e974e7a5a71b5b27488c15ae8893"
+      },
+      "after": {
+        "bytes": 773,
+        "characters": 749,
+        "estimated_tokens": 188,
+        "sha256": "a43d0ceb145f498467e30846ab41fff3dec9e974e7a5a71b5b27488c15ae8893"
+      },
+      "change": "unchanged"
+    },
+    "knowledge/candidatos-mcp-futuro.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 497,
+        "characters": 477,
+        "estimated_tokens": 120,
+        "sha256": "fc7f44f24d54c6e0e6ef81e06ec0d1bfcdf4f846ce4a4c14018e2bbde8e56189"
+      },
+      "after": null,
+      "change": "removed_or_moved"
+    },
+    "knowledge/fontes.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 2426,
+        "characters": 2336,
+        "estimated_tokens": 584,
+        "sha256": "cedc949e8fed3531f9219d4ce2acfb93b721aeb3a6f24469180d156d198b919e"
+      },
+      "after": {
+        "bytes": 1384,
+        "characters": 1332,
+        "estimated_tokens": 333,
+        "sha256": "a70b4d1e1af54a1534b85eaa19a00975977e6b90be376cbc1edfcba428104afa"
+      },
+      "change": "modified"
+    },
+    "knowledge/portfolio.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1398,
+        "characters": 1356,
+        "estimated_tokens": 339,
+        "sha256": "19dabe1eb0c6e75bd5187d251bbf105d03f0f6f3856ca0a4a7b6cd865e125650"
+      },
+      "after": {
+        "bytes": 1613,
+        "characters": 1576,
+        "estimated_tokens": 394,
+        "sha256": "c5a9bc47ddeb1b94b5555ee9a8a282e0c2c4ed9feb304c0167b915c8cc30eb92"
+      },
+      "change": "modified"
+    },
+    "knowledge/renda-fixa.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1680,
+        "characters": 1620,
+        "estimated_tokens": 405,
+        "sha256": "6ed3b4d718e61636e5b73ddd48521db61dce6ef42a2e5ee0e0f6df44dff6a6f7"
+      },
+      "after": {
+        "bytes": 1922,
+        "characters": 1858,
+        "estimated_tokens": 465,
+        "sha256": "30cfaa31fb1636f540110a123ced6a4eb206296c39aac6358c2c81e31961a8fe"
+      },
+      "change": "modified"
+    },
+    "knowledge/risco.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1197,
+        "characters": 1151,
+        "estimated_tokens": 288,
+        "sha256": "6ef7f4a0d2075e5ca4e58fefb5e94e880f557f8c5361b6b4514083f112526ddd"
+      },
+      "after": {
+        "bytes": 1182,
+        "characters": 1135,
+        "estimated_tokens": 284,
+        "sha256": "944922b0af194d1eb0aa91f8a59b9f284310cbbe8b51f8002c54351f6a59cbe2"
+      },
+      "change": "modified"
+    },
+    "knowledge/schema-acoes.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1442,
+        "characters": 1394,
+        "estimated_tokens": 349,
+        "sha256": "a5075c8ac4e569c5f575d25875dab265d0a8187f6022c1b936ca013933032a3a"
+      },
+      "after": {
+        "bytes": 1442,
+        "characters": 1394,
+        "estimated_tokens": 349,
+        "sha256": "a5075c8ac4e569c5f575d25875dab265d0a8187f6022c1b936ca013933032a3a"
+      },
+      "change": "unchanged"
+    },
+    "knowledge/schema-decisoes.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 792,
+        "characters": 763,
+        "estimated_tokens": 191,
+        "sha256": "babd9eae7c134ce199204fcd955b9b2aa3e4b6188fa3f41cab0a4ddec5089866"
+      },
+      "after": {
+        "bytes": 792,
+        "characters": 763,
+        "estimated_tokens": 191,
+        "sha256": "babd9eae7c134ce199204fcd955b9b2aa3e4b6188fa3f41cab0a4ddec5089866"
+      },
+      "change": "unchanged"
+    },
+    "knowledge/schema-fundos-imobiliarios.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1237,
+        "characters": 1207,
+        "estimated_tokens": 302,
+        "sha256": "3b984e0abd78b38918afa5ee840ae054a449c0b5d8bfaffe64be7eb36405b4cd"
+      },
+      "after": {
+        "bytes": 1237,
+        "characters": 1207,
+        "estimated_tokens": 302,
+        "sha256": "3b984e0abd78b38918afa5ee840ae054a449c0b5d8bfaffe64be7eb36405b4cd"
+      },
+      "change": "unchanged"
+    },
+    "knowledge/schema-posicoes.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 3931,
+        "characters": 3836,
+        "estimated_tokens": 959,
+        "sha256": "b57afc8715581ccd353fbe92270e5b8b3e71a94f55130456c2e9370745131f08"
+      },
+      "after": {
+        "bytes": 2825,
+        "characters": 2753,
+        "estimated_tokens": 689,
+        "sha256": "07f9960b5eb5e311f0d92c4909716edb65ead13fcb07190dd949be83879b3b68"
+      },
+      "change": "modified"
+    },
+    "knowledge/schema-previdencia-privada.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1569,
+        "characters": 1521,
+        "estimated_tokens": 381,
+        "sha256": "c6d5044a075bdc8af2876764b9ed0975ffbcd68d59187f212230df16b3a06f29"
+      },
+      "after": {
+        "bytes": 1569,
+        "characters": 1521,
+        "estimated_tokens": 381,
+        "sha256": "c6d5044a075bdc8af2876764b9ed0975ffbcd68d59187f212230df16b3a06f29"
+      },
+      "change": "unchanged"
+    },
+    "knowledge/schema-renda-fixa.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 3205,
+        "characters": 3123,
+        "estimated_tokens": 781,
+        "sha256": "e1e19146a22cf708c64aaac3c3b84e5e9fcb6b7ac6cfc453834a45c05bbecadd"
+      },
+      "after": {
+        "bytes": 3110,
+        "characters": 3029,
+        "estimated_tokens": 758,
+        "sha256": "76f43262f2a24cf30dbff1547711145026d55e8c700329329631a3e3a551f84a"
+      },
+      "change": "modified"
+    },
+    "knowledge/schema-tesouro-direto.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 2321,
+        "characters": 2248,
+        "estimated_tokens": 562,
+        "sha256": "029d68d53b9fdd71c21881eda725619801679f9c77a9a8dd331aebeef9c1030e"
+      },
+      "after": {
+        "bytes": 2321,
+        "characters": 2248,
+        "estimated_tokens": 562,
+        "sha256": "029d68d53b9fdd71c21881eda725619801679f9c77a9a8dd331aebeef9c1030e"
+      },
+      "change": "unchanged"
+    },
+    "knowledge/tributacao.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1973,
+        "characters": 1924,
+        "estimated_tokens": 481,
+        "sha256": "b2254348f0cd58eee2bc33861eb76d28c4de4a02b57d7a9f6beac7ca1293b579"
+      },
+      "after": {
+        "bytes": 1753,
+        "characters": 1710,
+        "estimated_tokens": 428,
+        "sha256": "e5b994295e020a16cec7775c542806071c1841031835b0e9769bb218ce1de27d"
+      },
+      "change": "modified"
+    },
+    "scripts/consultar_rf_b3.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 10170,
+        "characters": 10117,
+        "estimated_tokens": 2530,
+        "sha256": "ad2ef3430f11beba1e0ed9b960d657b15cd1f77d29dfad908130b6301b57d570"
+      },
+      "after": {
+        "bytes": 10170,
+        "characters": 10117,
+        "estimated_tokens": 2530,
+        "sha256": "ad2ef3430f11beba1e0ed9b960d657b15cd1f77d29dfad908130b6301b57d570"
+      },
+      "change": "unchanged"
+    },
+    "scripts/context_footprint.py": {
+      "category": "code_tests_and_config",
+      "before": null,
+      "after": {
+        "bytes": 6540,
+        "characters": 6540,
+        "estimated_tokens": 1635,
+        "sha256": "70ed6388e4e111683fbf0217c01cefb6de07c55d46e335675c48d1b038690dc0"
+      },
+      "change": "added"
+    },
+    "scripts/ingest_positions.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 8604,
+        "characters": 8578,
+        "estimated_tokens": 2145,
+        "sha256": "8e8aaac86b287ddaa61afa986ebd499bc15c2a0a352db7bb50d1811075ef526c"
+      },
+      "after": {
+        "bytes": 8604,
+        "characters": 8578,
+        "estimated_tokens": 2145,
+        "sha256": "8e8aaac86b287ddaa61afa986ebd499bc15c2a0a352db7bb50d1811075ef526c"
+      },
+      "change": "unchanged"
+    },
+    "scripts/parse_b3_isin.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 4198,
+        "characters": 4157,
+        "estimated_tokens": 1040,
+        "sha256": "e9d3cb05447fcb94e3a2e0213ff4230192aff8ac5a2f4a2efdfc4ee8b73b947e"
+      },
+      "after": {
+        "bytes": 4198,
+        "characters": 4157,
+        "estimated_tokens": 1040,
+        "sha256": "e9d3cb05447fcb94e3a2e0213ff4230192aff8ac5a2f4a2efdfc4ee8b73b947e"
+      },
+      "change": "unchanged"
+    },
+    "scripts/positions_summary.py": {
+      "category": "code_tests_and_config",
+      "before": null,
+      "after": {
+        "bytes": 1990,
+        "characters": 1990,
+        "estimated_tokens": 498,
+        "sha256": "cede94f08bd38ec807ea332ecd90db56e368835969a103f16b35ff20409d887c"
+      },
+      "change": "added"
+    },
+    "scripts/sources.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 8735,
+        "characters": 8710,
+        "estimated_tokens": 2178,
+        "sha256": "2b207d055d47ffda59e5da6b8ae51361344e6ed4abb88419ba12ebd8853be25f"
+      },
+      "after": {
+        "bytes": 8735,
+        "characters": 8710,
+        "estimated_tokens": 2178,
+        "sha256": "2b207d055d47ffda59e5da6b8ae51361344e6ed4abb88419ba12ebd8853be25f"
+      },
+      "change": "unchanged"
+    },
+    "scripts/update_rf_fields.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 2514,
+        "characters": 2509,
+        "estimated_tokens": 628,
+        "sha256": "f516c6471b30e4fcfb63ad35773331877e42894ae2c1aeb675efec675980697d"
+      },
+      "after": {
+        "bytes": 2514,
+        "characters": 2509,
+        "estimated_tokens": 628,
+        "sha256": "f516c6471b30e4fcfb63ad35773331877e42894ae2c1aeb675efec675980697d"
+      },
+      "change": "unchanged"
+    },
+    "scripts/xp_import_acoes.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 4444,
+        "characters": 4407,
+        "estimated_tokens": 1102,
+        "sha256": "092c0abf36f5e14a3ad9b70d2800257255d5895fb0a6c35ba8abaebd017f0df8"
+      },
+      "after": {
+        "bytes": 4444,
+        "characters": 4407,
+        "estimated_tokens": 1102,
+        "sha256": "092c0abf36f5e14a3ad9b70d2800257255d5895fb0a6c35ba8abaebd017f0df8"
+      },
+      "change": "unchanged"
+    },
+    "scripts/xp_import_fii.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 4723,
+        "characters": 4697,
+        "estimated_tokens": 1175,
+        "sha256": "1d9daaa7c34d1b2cede1f4b86b38cc78fa5a0b4f1aef57377aeeddadd9553ba4"
+      },
+      "after": {
+        "bytes": 4723,
+        "characters": 4697,
+        "estimated_tokens": 1175,
+        "sha256": "1d9daaa7c34d1b2cede1f4b86b38cc78fa5a0b4f1aef57377aeeddadd9553ba4"
+      },
+      "change": "unchanged"
+    },
+    "scripts/xp_import_position.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 11524,
+        "characters": 11492,
+        "estimated_tokens": 2873,
+        "sha256": "9fcef67ce2f8cfd7302106349a09e5538cd855bb28df79accfca0be8c0141a63"
+      },
+      "after": {
+        "bytes": 11524,
+        "characters": 11492,
+        "estimated_tokens": 2873,
+        "sha256": "9fcef67ce2f8cfd7302106349a09e5538cd855bb28df79accfca0be8c0141a63"
+      },
+      "change": "unchanged"
+    },
+    "scripts/xp_import_previdencia.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 4395,
+        "characters": 4373,
+        "estimated_tokens": 1094,
+        "sha256": "eb3cd71f146726f7dfd93b5ea9b293c52763623b6e440045b070a02b16e1ed77"
+      },
+      "after": {
+        "bytes": 4395,
+        "characters": 4373,
+        "estimated_tokens": 1094,
+        "sha256": "eb3cd71f146726f7dfd93b5ea9b293c52763623b6e440045b070a02b16e1ed77"
+      },
+      "change": "unchanged"
+    },
+    "scripts/xp_import_rf.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 7157,
+        "characters": 7133,
+        "estimated_tokens": 1784,
+        "sha256": "5f0a2678db4543b6f5c9181072c72d94fa8ba375b0bcdfdaca93af39fde777b5"
+      },
+      "after": {
+        "bytes": 7157,
+        "characters": 7133,
+        "estimated_tokens": 1784,
+        "sha256": "5f0a2678db4543b6f5c9181072c72d94fa8ba375b0bcdfdaca93af39fde777b5"
+      },
+      "change": "unchanged"
+    },
+    "skills/analise-acao/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1096,
+        "characters": 1059,
+        "estimated_tokens": 265,
+        "sha256": "87001485b3680b2e22faf62c956b6f9db12571e55c2d9e5b69dcd1bdaaa3f68d"
+      },
+      "after": {
+        "bytes": 832,
+        "characters": 796,
+        "estimated_tokens": 199,
+        "sha256": "9404dd2b5ee65523697430dfa1d7287f653a7c3546e0f62a484e6246424512f5"
+      },
+      "change": "modified"
+    },
+    "skills/analise-carteira/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1336,
+        "characters": 1300,
+        "estimated_tokens": 325,
+        "sha256": "863a1e6eff37b90b59fb39024a127ac257f9f9f76a8c92a3ebcc46b26524e7ec"
+      },
+      "after": {
+        "bytes": 1097,
+        "characters": 1067,
+        "estimated_tokens": 267,
+        "sha256": "923923d55ddb83598cf4cca662b8f4334c5fbdeb11d0957c71a2e66bf41f5ac1"
+      },
+      "change": "modified"
+    },
+    "skills/analise-cdb/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1433,
+        "characters": 1388,
+        "estimated_tokens": 347,
+        "sha256": "8bb40b5f12b86d1c1acb7d4d41512d3f44b463c5f073b1eb13d2108f20dae391"
+      },
+      "after": {
+        "bytes": 1053,
+        "characters": 1020,
+        "estimated_tokens": 255,
+        "sha256": "4d28441eb465eea3fb0f98643c832d1dd47599ed2d5c3446f6ec640a818fe96b"
+      },
+      "change": "modified"
+    },
+    "skills/analise-noticias/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1032,
+        "characters": 1008,
+        "estimated_tokens": 252,
+        "sha256": "f1cbb4496af57b59ad182140b72a3693c332c2f728872fd7d39ef1402eb379c6"
+      },
+      "after": {
+        "bytes": 860,
+        "characters": 830,
+        "estimated_tokens": 208,
+        "sha256": "789a60a57d72fcd1fa3731f35877b7b7df33f2ce8fee1720de095939a308a816"
+      },
+      "change": "modified"
+    },
+    "skills/analise-risco/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1272,
+        "characters": 1236,
+        "estimated_tokens": 309,
+        "sha256": "de36bbdd829297d40651c770745c03f4d104c0f21c7c40af444504a45d4cb6ab"
+      },
+      "after": {
+        "bytes": 834,
+        "characters": 811,
+        "estimated_tokens": 203,
+        "sha256": "d281bfa6efe6f7be164c115d502672c8a16fecebaeea6ffbc870ba8718800032"
+      },
+      "change": "modified"
+    },
+    "skills/comparar-investimentos/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1255,
+        "characters": 1219,
+        "estimated_tokens": 305,
+        "sha256": "78f02ab7c04119a9e565e1377877a091c229917ef3d3d0319ad3dd8b14e067dd"
+      },
+      "after": {
+        "bytes": 1124,
+        "characters": 1086,
+        "estimated_tokens": 272,
+        "sha256": "a3a1c62225eba33ee1d6e69752c263de2cb1099bb218193a2f5d0bba58b4beae"
+      },
+      "change": "modified"
+    },
+    "skills/consultar-rf-b3/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 2987,
+        "characters": 2923,
+        "estimated_tokens": 731,
+        "sha256": "17bba8cfa36f2ca648a578b09b7601a87fd7590fe56a3e5935136aeed0e30687"
+      },
+      "after": {
+        "bytes": 1340,
+        "characters": 1302,
+        "estimated_tokens": 326,
+        "sha256": "f7abef52fb6ce09b7b12c3f9f6b3c398bdf997ed8547c6bcf2584de6ff72f86f"
+      },
+      "change": "modified"
+    },
+    "skills/consultar-rf-b3/references/base-local.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": null,
+      "after": {
+        "bytes": 1916,
+        "characters": 1863,
+        "estimated_tokens": 466,
+        "sha256": "984ddc009b81d5793848b3512aa2159f5ddcae057437057e30467f145d1a2c38"
+      },
+      "change": "added"
+    },
+    "skills/gerir-fontes/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": null,
+      "after": {
+        "bytes": 786,
+        "characters": 764,
+        "estimated_tokens": 191,
+        "sha256": "b3725003f92bceabe8d464d1c38eb4ff87c838b38900d4716a632a0feb2d2630"
+      },
+      "change": "added"
+    },
+    "skills/ingestao-posicoes/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": null,
+      "after": {
+        "bytes": 1212,
+        "characters": 1184,
+        "estimated_tokens": 296,
+        "sha256": "dea85992d735c82c14381e09262500f7065367cc178c7f7a19dbc001713e7ffc"
+      },
+      "change": "added"
+    },
+    "skills/ingestao-posicoes/references/snapshot-completo.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": null,
+      "after": {
+        "bytes": 1242,
+        "characters": 1209,
+        "estimated_tokens": 303,
+        "sha256": "34d9b8eabc295fd07d32913e265ca2138d070f833be9aed2727795df4d76ae94"
+      },
+      "change": "added"
+    },
+    "skills/pesquisa-mercado/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1217,
+        "characters": 1181,
+        "estimated_tokens": 296,
+        "sha256": "61ff38dd15a39ed3b0ca7022a4732480191ac2701aa5a08cae693bbbb58537ef"
+      },
+      "after": {
+        "bytes": 918,
+        "characters": 898,
+        "estimated_tokens": 225,
+        "sha256": "bb474882e70f80ed981f5e757a7641e6aa297333b94bf6d54342e078ddab30d4"
+      },
+      "change": "modified"
+    },
+    "skills/pesquisa-mercado/references/fiis.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": null,
+      "after": {
+        "bytes": 1893,
+        "characters": 1842,
+        "estimated_tokens": 461,
+        "sha256": "0a91d63fa2f8146f1fa6095700ece0e2889b8a90857e0e29b7f91945697fc9dd"
+      },
+      "change": "added"
+    },
+    "skills/revisar-decisao/SKILL.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 1101,
+        "characters": 1065,
+        "estimated_tokens": 267,
+        "sha256": "5803bb2593cb776dc66df4d432c4177e1ecf9a54500aa5ca6f2f01502e4dd1ca"
+      },
+      "after": {
+        "bytes": 1050,
+        "characters": 1022,
+        "estimated_tokens": 256,
+        "sha256": "f7b3b57d393f3ed0a84f89a1619681cbed82553928ce9510c9d36d5ee0e152a3"
+      },
+      "change": "modified"
+    },
+    "sources/catalog.json": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 9243,
+        "characters": 9087,
+        "estimated_tokens": 2272,
+        "sha256": "44012449dd747674081fdf402724b85d5cdf01b620ebb497d1549bed5d3ea00e"
+      },
+      "after": {
+        "bytes": 9243,
+        "characters": 9087,
+        "estimated_tokens": 2272,
+        "sha256": "44012449dd747674081fdf402724b85d5cdf01b620ebb497d1549bed5d3ea00e"
+      },
+      "change": "unchanged"
+    },
+    "sources/index.md": {
+      "category": "on_demand_guidance_and_catalog",
+      "before": {
+        "bytes": 2873,
+        "characters": 2828,
+        "estimated_tokens": 707,
+        "sha256": "0e966d682516e19da383c2c326c0d0b2c1a587885ad178a25153224a0993291a"
+      },
+      "after": {
+        "bytes": 1680,
+        "characters": 1665,
+        "estimated_tokens": 417,
+        "sha256": "0dde175a5734eeaceb2b9402f2b9443d27bd6cb53840a2e2b951e096739d6e71"
+      },
+      "change": "modified"
+    },
+    "state/ATIVOS_PENDENTES_ISIN.md": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 5692,
+        "characters": 5619,
+        "estimated_tokens": 1405,
+        "sha256": "e01c966e29ad3c888677236a744805e5844cd5a47c601c5fb897fedc621dea55"
+      },
+      "after": {
+        "bytes": 527,
+        "characters": 515,
+        "estimated_tokens": 129,
+        "sha256": "c26e319669951097f711b179674c3c9174067baed982ab16dc8667c2accfc3e3"
+      },
+      "change": "modified"
+    },
+    "state/positions/.gitkeep": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 1,
+        "characters": 1,
+        "estimated_tokens": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "after": {
+        "bytes": 1,
+        "characters": 1,
+        "estimated_tokens": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "change": "unchanged"
+    },
+    "state/positions/acoes.csv": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 515,
+        "characters": 515,
+        "estimated_tokens": 129,
+        "sha256": "fc4576c119aeb9b3dae5182fd2bd4878789c1da19c1607da0ba514a8c9ec0ded"
+      },
+      "after": {
+        "bytes": 515,
+        "characters": 515,
+        "estimated_tokens": 129,
+        "sha256": "fc4576c119aeb9b3dae5182fd2bd4878789c1da19c1607da0ba514a8c9ec0ded"
+      },
+      "change": "unchanged"
+    },
+    "state/positions/fundos_imobiliarios.csv": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 390,
+        "characters": 390,
+        "estimated_tokens": 98,
+        "sha256": "256b1aff315bddb692c5557e2825925d3cd2d56a00d95d3e69300c211eb16e77"
+      },
+      "after": {
+        "bytes": 390,
+        "characters": 390,
+        "estimated_tokens": 98,
+        "sha256": "256b1aff315bddb692c5557e2825925d3cd2d56a00d95d3e69300c211eb16e77"
+      },
+      "change": "unchanged"
+    },
+    "state/positions/previdencia_privada.csv": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 1415,
+        "characters": 1403,
+        "estimated_tokens": 351,
+        "sha256": "e032912f37d5b9cd9080b1160c62dc98bf629250ca3f1b1859557caae3a25efb"
+      },
+      "after": {
+        "bytes": 1415,
+        "characters": 1403,
+        "estimated_tokens": 351,
+        "sha256": "e032912f37d5b9cd9080b1160c62dc98bf629250ca3f1b1859557caae3a25efb"
+      },
+      "change": "unchanged"
+    },
+    "state/positions/renda_fixa.csv": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 24407,
+        "characters": 24395,
+        "estimated_tokens": 6099,
+        "sha256": "b5391359479a3339814fec45dcc462e5e587e9998a5947f565600f5661c8672d"
+      },
+      "after": {
+        "bytes": 24407,
+        "characters": 24395,
+        "estimated_tokens": 6099,
+        "sha256": "b5391359479a3339814fec45dcc462e5e587e9998a5947f565600f5661c8672d"
+      },
+      "change": "unchanged"
+    },
+    "state/positions/tesouro_direto.csv": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 239,
+        "characters": 239,
+        "estimated_tokens": 60,
+        "sha256": "0b61fb2f626bbf9f023901ba4f1ea0e434901d37b79ef18807e3c3c30c5fca23"
+      },
+      "after": {
+        "bytes": 239,
+        "characters": 239,
+        "estimated_tokens": 60,
+        "sha256": "0b61fb2f626bbf9f023901ba4f1ea0e434901d37b79ef18807e3c3c30c5fca23"
+      },
+      "change": "unchanged"
+    },
+    "state/profile.json": {
+      "category": "data_and_originals",
+      "before": null,
+      "after": {
+        "bytes": 705,
+        "characters": 681,
+        "estimated_tokens": 171,
+        "sha256": "782754dee9ac15d54dc2505e65115498342288c83f676e45ab1867ba00c04cca"
+      },
+      "change": "added"
+    },
+    "state/raw/.gitkeep": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 1,
+        "characters": 1,
+        "estimated_tokens": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "after": {
+        "bytes": 1,
+        "characters": 1,
+        "estimated_tokens": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "change": "unchanged"
+    },
+    "state/raw/guia-coleta-dados-fiis.md": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 9968,
+        "characters": 9633,
+        "estimated_tokens": 2409,
+        "sha256": "08993752306ed6d19fa8a331cb752a440df6f70e9034bc7c0caacc8f4b9215ec"
+      },
+      "after": {
+        "bytes": 9968,
+        "characters": 9633,
+        "estimated_tokens": 2409,
+        "sha256": "08993752306ed6d19fa8a331cb752a440df6f70e9034bc7c0caacc8f4b9215ec"
+      },
+      "change": "unchanged"
+    },
+    "state/raw/matriz-decisao-fiis.txt": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 17736,
+        "characters": 11319,
+        "estimated_tokens": 2830,
+        "sha256": "90b5e5d7ce94641c21c00fc4a09a5ea19940c977e61b717b1e95972391283551"
+      },
+      "after": {
+        "bytes": 17736,
+        "characters": 11319,
+        "estimated_tokens": 2830,
+        "sha256": "90b5e5d7ce94641c21c00fc4a09a5ea19940c977e61b717b1e95972391283551"
+      },
+      "change": "unchanged"
+    },
+    "state/raw/resumo-executivo-fiis-2026-09-26.md": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 10852,
+        "characters": 10276,
+        "estimated_tokens": 2569,
+        "sha256": "3f589adbdeff13aa2057c70a6796d70749a575ee81ce9f8f2936d91de1008c73"
+      },
+      "after": {
+        "bytes": 10852,
+        "characters": 10276,
+        "estimated_tokens": 2569,
+        "sha256": "3f589adbdeff13aa2057c70a6796d70749a575ee81ce9f8f2936d91de1008c73"
+      },
+      "change": "unchanged"
+    },
+    "state/raw/tabela-comparativa-fiis.csv": {
+      "category": "data_and_originals",
+      "before": {
+        "bytes": 913,
+        "characters": 901,
+        "estimated_tokens": 226,
+        "sha256": "ed203e5c952100930a544de24fa01d928034271f109ae810881ce0e5c2be3e90"
+      },
+      "after": {
+        "bytes": 913,
+        "characters": 901,
+        "estimated_tokens": 226,
+        "sha256": "ed203e5c952100930a544de24fa01d928034271f109ae810881ce0e5c2be3e90"
+      },
+      "change": "unchanged"
+    },
+    "state/reference/b3-legacy-observations.json": {
+      "category": "data_and_originals",
+      "before": null,
+      "after": {
+        "bytes": 1037,
+        "characters": 1018,
+        "estimated_tokens": 255,
+        "sha256": "9ec81bd1bf4b38c41863f4a2b6ac59352af1934f212e3ba7d72b8302c262470b"
+      },
+      "change": "added"
+    },
+    "state/reference/import-rf-observation.json": {
+      "category": "data_and_originals",
+      "before": null,
+      "after": {
+        "bytes": 366,
+        "characters": 359,
+        "estimated_tokens": 90,
+        "sha256": "dd88cf3056ca6f7bfd1185ad5f55f0000d03bb8e7e56ba0f410f68076a1861ae"
+      },
+      "change": "added"
+    },
+    "state/reference/regulatory-2026-09-26.json": {
+      "category": "data_and_originals",
+      "before": null,
+      "after": {
+        "bytes": 1688,
+        "characters": 1668,
+        "estimated_tokens": 417,
+        "sha256": "1b34e253a020cea23b374abcfc9a7539707e81ed154716109132fab3931021de"
+      },
+      "change": "added"
+    },
+    "state/reports/2026-09-26-ativos-pendentes-isin.md": {
+      "category": "data_and_originals",
+      "before": null,
+      "after": {
+        "bytes": 5692,
+        "characters": 5619,
+        "estimated_tokens": 1405,
+        "sha256": "e01c966e29ad3c888677236a744805e5844cd5a47c601c5fb897fedc621dea55"
+      },
+      "change": "added"
+    },
+    "tests/test_xp_import_acoes.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 2214,
+        "characters": 2194,
+        "estimated_tokens": 549,
+        "sha256": "397bfa06faa0574abced2a34d612f5caeb060363465ee6db70b705a09ff6ef33"
+      },
+      "after": {
+        "bytes": 2214,
+        "characters": 2194,
+        "estimated_tokens": 549,
+        "sha256": "397bfa06faa0574abced2a34d612f5caeb060363465ee6db70b705a09ff6ef33"
+      },
+      "change": "unchanged"
+    },
+    "tests/test_xp_import_fii.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 1963,
+        "characters": 1952,
+        "estimated_tokens": 488,
+        "sha256": "1ece3e465c96a85b9ea5bf53d0dd7f7574bacb94dbf130a326dac41aa0653f5e"
+      },
+      "after": {
+        "bytes": 1963,
+        "characters": 1952,
+        "estimated_tokens": 488,
+        "sha256": "1ece3e465c96a85b9ea5bf53d0dd7f7574bacb94dbf130a326dac41aa0653f5e"
+      },
+      "change": "unchanged"
+    },
+    "tests/test_xp_import_position.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 7260,
+        "characters": 7252,
+        "estimated_tokens": 1813,
+        "sha256": "3d999dbf45d45ff7d8648281260459037663a013713275bbf84412bdba1bc1ef"
+      },
+      "after": {
+        "bytes": 7260,
+        "characters": 7252,
+        "estimated_tokens": 1813,
+        "sha256": "3d999dbf45d45ff7d8648281260459037663a013713275bbf84412bdba1bc1ef"
+      },
+      "change": "unchanged"
+    },
+    "tests/test_xp_import_previdencia.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 2200,
+        "characters": 2190,
+        "estimated_tokens": 548,
+        "sha256": "89847ad526bf31d6743d6b8677256a3be6f9b73400beee3b4ef08b4e5e9aa91d"
+      },
+      "after": {
+        "bytes": 2200,
+        "characters": 2190,
+        "estimated_tokens": 548,
+        "sha256": "89847ad526bf31d6743d6b8677256a3be6f9b73400beee3b4ef08b4e5e9aa91d"
+      },
+      "change": "unchanged"
+    },
+    "tests/test_xp_import_rf.py": {
+      "category": "code_tests_and_config",
+      "before": {
+        "bytes": 10234,
+        "characters": 10221,
+        "estimated_tokens": 2556,
+        "sha256": "26b2a6cf8b5540b9a39cdcc6db48ebba2ef2036369b1a3ec08cf497a44974bca"
+      },
+      "after": {
+        "bytes": 10234,
+        "characters": 10221,
+        "estimated_tokens": 2556,
+        "sha256": "26b2a6cf8b5540b9a39cdcc6db48ebba2ef2036369b1a3ec08cf497a44974bca"
+      },
+      "change": "unchanged"
+    }
+  },
+  "task_guidance_scenarios": {
+    "pesquisa_mercado_basica": {
+      "before_files": [
+        "AGENTS.md",
+        "skills/pesquisa-mercado/SKILL.md",
+        "knowledge/fontes.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/pesquisa-mercado/SKILL.md",
+        "knowledge/fontes.md"
+      ],
+      "before_tokens": 1995,
+      "after_tokens": 1137,
+      "reduction_percent": 43.0
+    },
+    "noticia_sem_posicao": {
+      "before_files": [
+        "AGENTS.md",
+        "skills/analise-noticias/SKILL.md",
+        "knowledge/fontes.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/analise-noticias/SKILL.md",
+        "knowledge/fontes.md"
+      ],
+      "before_tokens": 1951,
+      "after_tokens": 1120,
+      "reduction_percent": 42.6
+    },
+    "acao_sem_posicao": {
+      "before_files": [
+        "AGENTS.md",
+        "skills/analise-acao/SKILL.md",
+        "knowledge/acoes-valuation.md",
+        "knowledge/portfolio.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/analise-acao/SKILL.md",
+        "knowledge/acoes-valuation.md"
+      ],
+      "before_tokens": 1907,
+      "after_tokens": 966,
+      "reduction_percent": 49.3
+    },
+    "cdb_cenario_sem_posicao": {
+      "before_files": [
+        "AGENTS.md",
+        "skills/analise-cdb/SKILL.md",
+        "knowledge/portfolio.md",
+        "knowledge/renda-fixa.md",
+        "knowledge/tributacao.md",
+        "knowledge/risco.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/analise-cdb/SKILL.md",
+        "knowledge/renda-fixa.md",
+        "knowledge/tributacao.md",
+        "knowledge/risco.md"
+      ],
+      "before_tokens": 2975,
+      "after_tokens": 2011,
+      "reduction_percent": 32.4
+    },
+    "comparacao_renda_fixa_sem_posicao": {
+      "before_files": [
+        "AGENTS.md",
+        "skills/comparar-investimentos/SKILL.md",
+        "knowledge/portfolio.md",
+        "knowledge/renda-fixa.md",
+        "knowledge/tributacao.md",
+        "knowledge/risco.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/comparar-investimentos/SKILL.md",
+        "knowledge/renda-fixa.md",
+        "knowledge/tributacao.md",
+        "knowledge/risco.md"
+      ],
+      "before_tokens": 2933,
+      "after_tokens": 2028,
+      "reduction_percent": 30.9
+    },
+    "risco_carteira_base": {
+      "before_files": [
+        "AGENTS.md",
+        "skills/analise-risco/SKILL.md",
+        "knowledge/portfolio.md",
+        "knowledge/risco.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/analise-risco/SKILL.md",
+        "knowledge/portfolio.md",
+        "knowledge/risco.md"
+      ],
+      "before_tokens": 2051,
+      "after_tokens": 1460,
+      "reduction_percent": 28.8
+    },
+    "carteira_com_schema_canonico_sem_credito": {
+      "before_files": [
+        "AGENTS.md",
+        "skills/analise-carteira/SKILL.md",
+        "knowledge/portfolio.md",
+        "knowledge/schema-posicoes.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/analise-carteira/SKILL.md",
+        "knowledge/portfolio.md",
+        "knowledge/schema-posicoes.md"
+      ],
+      "before_tokens": 2738,
+      "after_tokens": 1929,
+      "reduction_percent": 29.5
+    },
+    "consulta_b3_sem_posicao": {
+      "before_files": [
+        "AGENTS.md",
+        "skills/consultar-rf-b3/SKILL.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/consultar-rf-b3/SKILL.md",
+        "skills/consultar-rf-b3/references/base-local.md"
+      ],
+      "before_tokens": 1846,
+      "after_tokens": 1371,
+      "reduction_percent": 25.7
+    },
+    "importacao_tesouro": {
+      "before_files": [
+        "AGENTS.md",
+        "knowledge/schema-tesouro-direto.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/ingestao-posicoes/SKILL.md",
+        "knowledge/schema-tesouro-direto.md"
+      ],
+      "before_tokens": 1677,
+      "after_tokens": 1437,
+      "reduction_percent": 14.3
+    },
+    "ingestao_snapshot_completo": {
+      "before_files": [
+        "AGENTS.md",
+        "knowledge/portfolio.md",
+        "knowledge/schema-posicoes.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/ingestao-posicoes/SKILL.md",
+        "skills/ingestao-posicoes/references/snapshot-completo.md",
+        "knowledge/portfolio.md",
+        "knowledge/schema-posicoes.md"
+      ],
+      "before_tokens": 2413,
+      "after_tokens": 2261,
+      "reduction_percent": 6.3
+    },
+    "revisao_decisao_base": {
+      "before_files": [
+        "AGENTS.md",
+        "skills/revisar-decisao/SKILL.md",
+        "knowledge/schema-decisoes.md"
+      ],
+      "after_files": [
+        "AGENTS.md",
+        "skills/revisar-decisao/SKILL.md",
+        "knowledge/schema-decisoes.md"
+      ],
+      "before_tokens": 1573,
+      "after_tokens": 1026,
+      "reduction_percent": 34.8
+    }
+  }
+}

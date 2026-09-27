@@ -1,13 +1,17 @@
-# Contexto pessoal validado
+# Leitura da carteira
 
-- Carteira concentrada em CDBs prefixados e de crédito de bancos pequenos e médios; alocações menores em LCA, CRI, ações e FIIs. Não inferir pesos atuais sem snapshot.
-- Custódia primária: XP Investimentos. Secundária: BTG Pactual.
-- State atual é manual: `PosicaoDetalhada.xlsx` e PDF de posição da XP; eventualmente arquivos BTG. O formato canônico está em `schema-posicoes.md`.
-- Desconto de saída antecipada composto ao longo do horizonte de reinvestimento pode consumir a vantagem de taxa nominal maior; em horizontes curtos, resgate tende a ser pouco atrativo. Testar com números do caso.
-- Venda antecipada pode antecipar IR e reinvestimento inicia novo prazo para tabela regressiva; incluir ambas as pernas e datas.
-- Risco de reinvestimento é real e pode superar o ganho matemático de esperar, sobretudo com Selic em queda. Explicitar cenários, sem predizer a taxa futura como fato.
-- FGC por emissor/conglomerado é restrição estrutural de construção de carteira. Ver `risco.md`.
-- Pitch de assessor exige verificação factual independente.
-- Lei 14.754/2023 e distinção entre remessa para investimento e disponibilidade são pontos de atenção tributária. Aplicação e alíquotas vigentes exigem consulta atual; ver `tributacao.md`.
+Posições canônicas: `state/positions/{XP|BTG}.csv` + `state/positions/manifest.json` (último snapshot completo aceito por custodiante); contrato em `knowledge/schema-posicoes.md`. Confira existência, data, custódias e cobertura. Ausência não significa posição zero. Histórico em `state/positions/history/`; originais em `state/raw/` ou `inbox/`.
 
-Este arquivo contém premissas fornecidas pelo titular, não posições ou cotações atuais.
+Os cinco CSVs abaixo são **recortes XP incrementais**, sem atualização automática de IDs existentes; não comprovam posição atual nem carteira completa. Não os some entre si ou ao snapshot sem conciliar sobreposição e datas. Leia apenas o schema do recorte utilizado:
+
+| CSV em `state/positions/` | Schema em `knowledge/` |
+| --- | --- |
+| `tesouro_direto.csv` | `schema-tesouro-direto.md` |
+| `previdencia_privada.csv` | `schema-previdencia-privada.md` |
+| `fundos_imobiliarios.csv` | `schema-fundos-imobiliarios.md` |
+| `acoes.csv` | `schema-acoes.md` |
+| `renda_fixa.csv` | `schema-renda-fixa.md` |
+
+`acquisition_price` tem unidades diferentes por recorte: confirme o schema antes de calcular. Valores ausentes ou `[pending]` não são zero; custo não é cotação atual nem preço executável. Não agregue moedas sem câmbio datado nem snapshots de datas distintas sem declarar defasagem.
+
+Contexto declarado pelo titular: `state/profile.json`, somente se a análise depender dele; não substitui snapshots. Limites pessoais não informados não devem ser inventados. Métodos condicionais: `knowledge/risco.md` (crédito/FGC), `knowledge/renda-fixa.md` (fluxos/reinvestimento), `knowledge/tributacao.md` (tributos).

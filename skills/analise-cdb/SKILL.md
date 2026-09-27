@@ -1,14 +1,14 @@
 ---
 name: analise-cdb
-description: Avalia CDB e decisão de manter versus vender e reinvestir, incluindo preço de saída e IR em cada perna; use para resgate antecipado ou nova compra de CDB.
+description: Avalia compra de CDB ou manter versus vender e reinvestir, com preço de saída e impostos em cada perna.
 ---
 
 # Análise de CDB
 
-**Consultar:** `knowledge/portfolio.md`, `knowledge/renda-fixa.md`, `knowledge/tributacao.md`, `knowledge/risco.md`; posição em `state/positions/` e decisão anterior do mesmo papel, se houver. Localize fontes de FGC/IR com `make fontes-listar TOPIC=credito` e `make fontes-listar TOPIC=tributacao`; oferta e cotação executável devem vir de documento/corretora.
+Leia `knowledge/renda-fixa.md`, `knowledge/tributacao.md` e `knowledge/risco.md`. Se usar posição pessoal, leia `knowledge/portfolio.md` e o lote; histórico apenas do mesmo papel.
 
-1. Fixe lote, data de aquisição, taxa/convenção, vencimento, valor atual e preço líquido de saída. Peça dado ausente; sem preço executável, só cenários.
-2. Calcule manter até o horizonte e vender+reinvestir na **mesma data final**. Trate IR de venda e de nova aplicação separadamente, com prazos corretos; inclua deságio capitalizado, custos e possível IOF. Mostre contas ou fórmula reproduzível.
-3. Faça sensibilidade de taxa de reinvestimento, preço de saída e horizonte. Avalie risco do emissor, FGC, liquidez e risco de reinvestimento; pitch de assessor requer verificação.
+1. Obtenha aquisição, principal, taxa/convenção, vencimento, horizonte e cotação executável de saída/substituição via documento ou corretora. Sem cotação, trabalhe condicionalmente.
+2. Aplique o método de fluxos líquidos de `knowledge/renda-fixa.md`, com IR/IOF/custos vigentes. Mostre fórmula/contas reproduzíveis e equilíbrio quando calculável.
+3. Compare risco do emissor/FGC, liquidez e reinvestimento conforme `knowledge/risco.md`; use `skills/analise-risco/SKILL.md` se houver avaliação detalhada de exposição.
 
-**Saída:** premissas/fontes, fluxos líquidos por cenário, ponto de equilíbrio se possível, riscos e conclusão condicional. **Qualidade:** não compare taxa nominal com retorno líquido nem atribua a Pine/BMG decisões não reconstruídas.
+Entregue premissas/fontes, fluxos na mesma data final, diferenças, sensibilidade e conclusão condicional. Não atribua conclusão a registro histórico pendente.
